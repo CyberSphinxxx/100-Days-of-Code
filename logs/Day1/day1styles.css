@@ -1,0 +1,33 @@
+
+body{
+    background-color: #b1b1b1;
+    font-family: Arial, sans-serif;
+}
+.texts{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.745);
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.texts:hover{
+    color: #333;
+    background-color: #ff0202;
+}
+
+.anime{
+    height: 100px;
+}
