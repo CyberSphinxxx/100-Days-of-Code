@@ -14,4 +14,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Reflections on lessons learned and challenges faced
 
 ## 📅Progress:
-Day 1 - 🚀 Starting strong!
+Day 1 - 🚀 Relearning/Reviewing HTML,CSS,JS
