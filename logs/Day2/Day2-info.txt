@@ -1,0 +1,9 @@
+Tutorial Followed
+
+Crazy Ink Animation Effect with CSS Only
+https://youtu.be/L1yU9-QRO48
+
+In this video with the topic Crazy Ink Animation Effect with CSS Only, 
+I will share with everyone how to create a crazy ink animation effect with just 3 lines of CSS, without using javascript.
+This would be an extremely interesting and terrifying effect.
+
