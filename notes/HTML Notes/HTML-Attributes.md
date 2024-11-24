@@ -35,3 +35,10 @@ Used with `<input>` elements:
 - **`placeholder`**: Displays a hint inside the input field.
 - **`value`**: Defines the default value of the input.
 - **`required`**: Marks the input field as mandatory.
+
+### Hyperlink Attributes
+
+Used with `<a>` elements:
+
+- **`href`**: Specifies the URL of the link.
+- **`target`**: Determines how the link opens (e.g., in a new tab).
