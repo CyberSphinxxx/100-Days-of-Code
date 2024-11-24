@@ -19,3 +19,10 @@ HTML links are created using the `<a>` tag, allowing navigation between web page
 - **`rel`**: Specifies the relationship between the current document and the linked resource (e.g., `nofollow`, `noopener`).
 - **`title`**: Provides additional information about the link when hovered over.
 - **`download`**: Prompts the browser to download the linked file instead of opening it.
+
+## Best Practices
+
+- Use descriptive link text that clearly indicates its purpose (e.g., "Visit our FAQ page" instead of "Click here").
+- Use `target="_blank"` sparingly and ensure accessibility by alerting users when a new tab will open.
+- Ensure proper contrast between link text and the background for better readability.
+- Test links regularly to avoid broken links that lead to a poor user experience.
