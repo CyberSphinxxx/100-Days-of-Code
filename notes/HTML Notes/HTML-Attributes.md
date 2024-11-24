@@ -42,3 +42,10 @@ Used with `<a>` elements:
 
 - **`href`**: Specifies the URL of the link.
 - **`target`**: Determines how the link opens (e.g., in a new tab).
+
+## Best Practices
+
+- Always use meaningful and descriptive values for attributes to enhance clarity and maintainability.
+- Avoid inline styling (`style` attribute) in favor of external or internal CSS for better separation of content and design.
+- Use unique `id` values to avoid conflicts in scripts or styling.
+- Test attributes to ensure they behave as intended across browsers and devices.
