@@ -19,3 +19,10 @@ These can be applied to almost any HTML element:
 - **`style`**: Adds inline CSS styling.
 - **`title`**: Provides additional information displayed as a tooltip when hovered.
 - **`data-*`**: Defines custom data attributes for storing extra data.
+
+### Event Attributes
+
+Define JavaScript event handlers for user interactions:
+
+- **`onclick`**: Executes JavaScript when the element is clicked.
+- **`onmouseover`**: Triggers when the mouse hovers over an element.
