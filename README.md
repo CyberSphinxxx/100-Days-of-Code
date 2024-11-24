@@ -17,3 +17,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 1 - 🚀 Relearning/Reviewing HTML,CSS,JS
 - Day 2 - ✒️ Learned Ink Intro Animation Technique
 - Day 3 - 💻 Read some HTML Stuffs
+- Day 4 - 📝 Created some HTML Notes
