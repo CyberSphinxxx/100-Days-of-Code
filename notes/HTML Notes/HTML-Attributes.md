@@ -26,3 +26,12 @@ Define JavaScript event handlers for user interactions:
 
 - **`onclick`**: Executes JavaScript when the element is clicked.
 - **`onmouseover`**: Triggers when the mouse hovers over an element.
+
+### Input-Specific Attributes
+
+Used with `<input>` elements:
+
+- **`type`**: Specifies the type of input (e.g., `text`, `password`, `email`).
+- **`placeholder`**: Displays a hint inside the input field.
+- **`value`**: Defines the default value of the input.
+- **`required`**: Marks the input field as mandatory.
