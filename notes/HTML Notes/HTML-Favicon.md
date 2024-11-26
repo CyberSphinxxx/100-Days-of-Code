@@ -55,3 +55,38 @@ The most common way to include a favicon is by using the `<link>` tag in your HT
   <link rel="shortcut icon" href="/path-to-your-favicon/favicon.ico" />
 </head>
 ```
+
+### **Option 2: Supporting Multiple Devices**
+
+For better compatibility with various devices and platforms:
+
+```html
+<head>
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Android Chrome -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="/android-chrome-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="/android-chrome-512x512.png"
+  />
+
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#2d89ef" />
+  <meta name="msapplication-TileImage" content="/mstile-150x150.png" />
+
+  <!-- Theme Color for Mobile Browsers -->
+  <meta name="theme-color" content="#ffffff" />
+</head>
+```
