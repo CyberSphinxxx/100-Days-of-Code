@@ -31,3 +31,27 @@ A favicon is a small square image, typically 16x16 pixels or 32x32 pixels, that 
   - 180x180 (for Apple Touch Icons)
 
 ---
+
+## **3. Adding a Favicon to Your Website**
+
+### **Option 1: Using the `<link>` Tag**
+
+The most common way to include a favicon is by using the `<link>` tag in your HTML `<head>` section.
+
+```html
+<head>
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/path-to-your-favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/path-to-your-favicon/favicon-16x16.png"
+  />
+  <link rel="shortcut icon" href="/path-to-your-favicon/favicon.ico" />
+</head>
+```
