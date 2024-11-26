@@ -90,3 +90,27 @@ For better compatibility with various devices and platforms:
   <meta name="theme-color" content="#ffffff" />
 </head>
 ```
+
+## **4. Testing Your Favicon**
+
+### **Step 1: Upload Your Favicon**
+
+- Place your favicon files in your website's root directory or an assets folder.
+
+### **Step 2: Clear Browser Cache**
+
+Browsers often cache the favicon. Clear the cache or perform a hard refresh:
+
+- **Windows/Linux**: `Ctrl + F5`
+- **Mac**: `Cmd + Shift + R`
+
+### **Step 3: Verify in Browsers**
+
+- Check if the favicon appears in the browser tab.
+- Bookmark the site and ensure the favicon displays correctly.
+
+### **Step 4: Validate with Online Tools**
+
+- Use [Favicon Checker](https://realfavicongenerator.net/favicon_checker) to verify your favicon setup.
+
+---
