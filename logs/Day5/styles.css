@@ -1,0 +1,31 @@
+.link-title{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    transition: .5s ease-in-out;
+}
+
+.link-subtitle{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    transition: .5s ease-in-out;
+}
+a:link {
+    color: green !important;
+    text-decoration: none;
+}
+
+a:visited{
+    color: rgb(0, 0, 0) !important;
+}
+
+a:hover{
+    background-color: aqua;
+}
+
+.link-title:hover{
+color: red;
+transition: .5s ease-in-out;
+}
