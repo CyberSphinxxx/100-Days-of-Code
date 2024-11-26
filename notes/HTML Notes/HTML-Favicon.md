@@ -114,3 +114,19 @@ Browsers often cache the favicon. Clear the cache or perform a hard refresh:
 - Use [Favicon Checker](https://realfavicongenerator.net/favicon_checker) to verify your favicon setup.
 
 ---
+
+## **5. Troubleshooting**
+
+### **Issue: Favicon Not Showing**
+
+- Ensure the file paths in the `<link>` tags are correct.
+- Confirm the favicon file is in a supported format (e.g., `.ico`, `.png`).
+- Clear your browser cache.
+- Verify that your web server has permissions to serve the favicon file.
+
+### **Issue: Favicon Appears Pixelated**
+
+- Use a higher resolution image, such as 32x32 or 64x64.
+- Check the image compression settings during export.
+
+---
