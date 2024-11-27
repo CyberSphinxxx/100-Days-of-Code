@@ -3,10 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>John's Socials</title>
     <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .profile {
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 0.1px solid #000000;
+            object-fit: cover;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: 0.3s ease-in-out;
+        }
+
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .links a i {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="profile.jpg" alt="John's Profile Picture">
+        </div>
+        
+        <!-- Heading -->
+        <h1>Connect with Me</h1>
+        
+        <!-- Social Links -->
+        <div class="links">
+            <a href="https://github.com/CyberSphinxxx" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://www.facebook.com/johnlemgonzales/" target="_blank">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a href="https://www.linkedin.com/in/john-lemar-gonzales-28011b28b/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://orcid.org/0009-0008-5909-9371" target="_blank">
+                <i class="fa-solid fa-id-card"></i> ORCID
+            </a>
+            <a href="https://discord.com/invite/74jFFFgjNT" target="_blank">
+                <i class="fa-brands fa-discord"></i> Discord Server
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>Made by John Lemar L. Gonzales</p>
+        </footer>
+    </div>
 </body>
 </html>
