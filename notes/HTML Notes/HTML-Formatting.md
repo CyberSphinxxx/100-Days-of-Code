@@ -21,3 +21,7 @@ HTML formatting involves using tags to style and emphasize parts of the text, ma
 ## Accessibility:
 
 Proper use of formatting tags can enhance content structure and improve accessibility for screen readers. Always prioritize **semantic meaning** when choosing formatting tags.
+
+## Resources:
+
+[Learn HTML text formatting in 3 minutes!](https://youtu.be/urT4pdM3sr4)
