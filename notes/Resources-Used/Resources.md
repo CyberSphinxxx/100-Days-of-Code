@@ -9,3 +9,4 @@
 ## HTML Resources
 
 [w3schools html](https://www.w3schools.com/html/default.asp)
+[How to add Icons in HTML Website | Font Awesome Icons | HTML CSS](https://youtu.be/7nJN12cHyv8)
