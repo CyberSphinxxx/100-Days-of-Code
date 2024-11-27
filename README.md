@@ -13,8 +13,12 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Code snippets, solutions, and projects
 - Reflections on lessons learned and challenges faced
 
+### Date Started: November 21, 2024
+
 ## 📅Progress:
 - Day 1 - 🚀 Relearning/Reviewing HTML,CSS,JS
 - Day 2 - ✒️ Learned Ink Intro Animation Technique
 - Day 3 - 💻 Read some HTML Stuffs
 - Day 4 - 📝 Created some HTML Notes
+- Day 5 - 📝 Learned Favicons
+- Day 6 - TBA
