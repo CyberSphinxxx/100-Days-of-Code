@@ -21,4 +21,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 3 - 💻 Read some HTML Stuffs
 - Day 4 - 📝 Created some HTML Notes
 - Day 5 - 📝 Learned Favicons
-- Day 6 - TBA
+- Day 6 - 🔗 Link icons from font awesome
