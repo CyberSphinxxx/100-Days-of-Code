@@ -54,3 +54,11 @@ In HTML, the `class` attribute allows you to assign one or more class names to a
   The element combines both styles to achieve the final design.
 
 ---
+
+## 4. Advantages of Using Multiple Classes
+
+- **Reusability:** Common styles can be shared with multiple elements using one class.
+- **Flexibility:** Additional classes allow for specific styling or differentiation.
+- **Modularity:** Classes can be mixed and matched for cleaner, more maintainable code.
+
+---
