@@ -14,3 +14,6 @@
 ## Sites Used For Research
 
 [Make text not copyable HTML](https://stackoverflow.com/questions/43203673/make-text-not-copyable-html)
+
+## Youtube Tutorials
+[What are Staged Changes in Git?](https://youtu.be/HyeNfWZBut8)
