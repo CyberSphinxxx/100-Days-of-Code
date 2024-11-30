@@ -10,3 +10,7 @@
 
 [w3schools html](https://www.w3schools.com/html/default.asp)
 [How to add Icons in HTML Website | Font Awesome Icons | HTML CSS](https://youtu.be/7nJN12cHyv8)
+
+## Sites Used For Research
+
+[Make text not copyable HTML](https://stackoverflow.com/questions/43203673/make-text-not-copyable-html)
