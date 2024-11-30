@@ -26,3 +26,10 @@ In HTML, the `class` attribute allows you to assign one or more class names to a
 - They are separated by spaces to indicate that the element has multiple classes.
 
 ---
+
+## 3. How Does It Work in CSS?
+
+- Each class in the list can be targeted separately or combined in CSS.
+- The element inherits styles from all the specified classes.
+
+---
