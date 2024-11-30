@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Practice Pt2</title>
+    <link rel="stylesheet" href="/logs/Day9/flexbox-practice-pt2/flexpt2.css">
 </head>
 <body>
     <h1 class="title">Flex Practice</h1>
-    <div>
+
+    <div class="box-container" id="boxContainer">
         <div class="box box1">Box 1</div>
         <div class="box box2">Box 2</div>
         <div class="box box3">Box 3</div>
@@ -19,5 +21,30 @@
         <div class="box box9">Box 9</div>
         <div class="box box10">Box 10</div>
     </div>
+
+    <div>
+        <button class="btn" onclick="addBox()">Add Box</button>
+        <button class="btn" onclick="removeBox()">Remove Box</button>
+    </div>
+
+    <script>
+        const boxContainer = document.getElementById('boxContainer');
+        let boxCount = 10;
+
+        function addBox() {
+            boxCount++;
+            const newBox = document.createElement('div');
+            newBox.className = `box box${boxCount}`;
+            newBox.textContent = `Box ${boxCount}`;
+            boxContainer.appendChild(newBox);
+        }
+
+        function removeBox() {
+            if (boxContainer.lastElementChild) {
+                boxContainer.removeChild(boxContainer.lastElementChild);
+                boxCount--;
+            }
+        }
+    </script>
 </body>
 </html>
