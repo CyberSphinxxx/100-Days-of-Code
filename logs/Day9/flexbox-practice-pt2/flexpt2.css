@@ -28,20 +28,20 @@ body {
     font-size: 16px;
     font-weight: bold;
     border: none;
-    border-radius: 8px; /* Rounded corners */
-    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background */
+    border-radius: 8px;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: all 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #0056b3, #003f7f); /* Darker gradient on hover */
-    transform: translateY(-2px); /* Lift effect */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .btn:active {
-    transform: translateY(0); /* Reset lift on click */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
