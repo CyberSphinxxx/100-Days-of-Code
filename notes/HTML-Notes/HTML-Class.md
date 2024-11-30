@@ -62,3 +62,11 @@ In HTML, the `class` attribute allows you to assign one or more class names to a
 - **Modularity:** Classes can be mixed and matched for cleaner, more maintainable code.
 
 ---
+
+## 5. Best Practices
+
+- **Meaningful Class Names:** Use clear, descriptive names (e.g., `btn-primary`, `card-header`).
+- **Avoid Overloading:** Use a reasonable number of classes per element to maintain readability.
+- **Order Doesn't Matter:** The order of class names in the attribute does not affect functionality.
+
+---
