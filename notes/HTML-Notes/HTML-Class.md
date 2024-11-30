@@ -32,4 +32,25 @@ In HTML, the `class` attribute allows you to assign one or more class names to a
 - Each class in the list can be targeted separately or combined in CSS.
 - The element inherits styles from all the specified classes.
 
+### Example:
+
+```html
+<div class="box box1">Box 1</div>
+```
+
+```css
+.box {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.box1 {
+  background-color: lightblue;
+}
+```
+
+- The `box` class gives the element a border and padding.
+- The `box1` class adds a background color.
+  The element combines both styles to achieve the final design.
+
 ---
