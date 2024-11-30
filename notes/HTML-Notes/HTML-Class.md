@@ -10,3 +10,19 @@ In HTML, the `class` attribute allows you to assign one or more class names to a
 - Each class represents a styling rule that can be applied to the element.
 
 ---
+
+## 2. Syntax
+
+- Multiple class names are separated by spaces.
+- Each class applies its respective styles, allowing for a combination of effects.
+
+### Example
+
+```html
+<div class="class1 class2 class3">Content</div>
+```
+
+- `class1`, `class2`, and `class3` are individual class names.
+- They are separated by spaces to indicate that the element has multiple classes.
+
+---
