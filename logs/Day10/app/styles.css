@@ -1,6 +1,9 @@
 *{
     margin: 0;
 }
+body{
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240,6.7%,17.6%,1)'/><path d='M20-5V5m0 30v10m20-30v10M0 15v10'  stroke-linecap='square' stroke-width='1' stroke='hsla(47,80.9%,61%,1)' fill='none'/><path d='M-5 40H5M-5 0H5m30 0h10M35 40h10M15 20h10'  stroke-linecap='square' stroke-width='1' stroke='hsla(4.1,89.6%,58.4%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+}
 
 header {
     background-color: red;
@@ -17,7 +20,8 @@ header {
 .main-title {
     text-align: center;
     padding: 10px;
-    font-size: 40px;
+    font-size: 50px;
+    color: white;
 }
 
 .box-container{
@@ -26,7 +30,8 @@ header {
 
     margin-top: 2rem;
     padding: 2rem;
-    background-color: rgba(0, 255, 255, 0.238);
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240,6.7%,17.6%,1)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='0.5' stroke='hsla(47,80.9%,61%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+
 }
 
  .fa-box { /*A */
@@ -42,6 +47,7 @@ header {
     border-radius: 10px;
     
     transition: .2s ease-in-out;
+    
 }
 
 .fa-box:hover{
@@ -51,3 +57,4 @@ header {
     background-color: gold;
     color: black;
 }
+
