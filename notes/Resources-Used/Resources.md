@@ -17,3 +17,6 @@
 
 ## Youtube Tutorials
 [What are Staged Changes in Git?](https://youtu.be/HyeNfWZBut8)
+
+## Inspirations
+[Roasting your portfolios #6](https://youtu.be/ufmYccZ5E8M)
