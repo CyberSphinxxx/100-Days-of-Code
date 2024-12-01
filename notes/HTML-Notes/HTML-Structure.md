@@ -116,3 +116,32 @@ HTML5 introduces semantic elements to structure content meaningfully. These elem
   <p>&copy; 2024 My Website</p>
 </footer>
 ```
+
+## Other Useful Elements
+
+### 1 `<div>`
+- A generic container for content with no semantic meaning.
+- Often used with classes or IDs for styling or scripting.
+
+```html
+<div class="container">
+  <p>This is a content container.</p>
+</div>
+```
+### 2 `<nav>`
+- Represents a block of navigation links.
+```html
+<nav>
+  <ul>
+    <li><a href="#section1">Section 1</a></li>
+    <li><a href="#section2">Section 2</a></li>
+  </ul>
+</nav>
+```
+### 3 `<span>`
+- A generic inline container for text or elements.
+- Used for styling or scripting small parts of a text.
+
+```html
+<p>This is a <span class="highlight">highlighted</span> text.</p>
+```
