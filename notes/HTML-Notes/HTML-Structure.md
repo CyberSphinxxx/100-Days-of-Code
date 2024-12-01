@@ -19,5 +19,26 @@ Here’s the skeleton of a basic HTML document:
     <!-- Content goes here -->
 </body>
 </html>
-
 ```
+
+## Elements of HTML Structure
+
+### 1. `<!DOCTYPE html>`
+- Declares the document type and version of HTML (HTML5 in this case).
+- It tells the browser how to interpret the document.
+
+### 2. `<html>`
+- The root element of an HTML document.
+- Encloses all content on the page.
+
+### 3. `<head>`
+
+- Contains metadata and resources for the document.
+- Examples:
+    - `<meta charset="UTF-8">` specifies the character encoding.
+    - `<meta name="viewport" content="width=device-width, initial-scale=1.0">` ensures responsive design.
+    - `<title>` defines the document title (appears on the browser tab).
+    - Links to stylesheets `(<link>)` or scripts `(<script>)`.
+
+### 4. `<body>`
+- Contains all the visible content of the webpage, such as text, images, and videos.
