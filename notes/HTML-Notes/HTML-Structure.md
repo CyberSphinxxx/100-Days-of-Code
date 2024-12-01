@@ -145,3 +145,51 @@ HTML5 introduces semantic elements to structure content meaningfully. These elem
 ```html
 <p>This is a <span class="highlight">highlighted</span> text.</p>
 ```
+
+## Example of a Complete HTML Document
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a leading company in our industry.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>We provide top-notch services tailored to your needs.</p>
+    </section>
+  </main>
+
+  <aside>
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#privacy">Privacy Policy</a></li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+```
