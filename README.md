@@ -25,3 +25,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 7 - 📝 Created Some Notes
 - Day 8 - 📦 Mastering Flexbox
 - Day 9 - 📦 Created FlexBoxer
+- Day 10 - 📦 Worked on LinkHub and playing with flexbox
