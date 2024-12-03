@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(56, 56, 56);
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: rgb(218, 165, 32);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    margin: 0;
+    padding: 20px;
+    width: 300px;
+    max-width: 400px;
+
+    position: relative;
+}
+
+.container button {
+    flex: 1;
+    margin: 10px 5px;
+}
+
+.input-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input-box{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.984);
+    cursor: pointer;
+}
+
+.password-input{
+    margin-bottom: 2rem;
+}
