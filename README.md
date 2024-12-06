@@ -26,3 +26,7 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 8 - 📦 Mastering Flexbox
 - Day 9 - 📦 Created FlexBoxer
 - Day 10 - 📦 Worked on LinkHub and playing with flexbox
+- Day 11 - 📝 Created Some Notes
+- Day 12 - ✍️ Practiced User Input Form
+- Day 13 - 👁️ Watched/Read Some Guides on the internet
+- Day 14 - 💻 Random practice in HTML stuffs
