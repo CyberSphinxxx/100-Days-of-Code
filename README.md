@@ -31,4 +31,5 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 13 - 👁️ Watched/Read Some Guides on the internet
 - Day 14 - 💻 Random practice in HTML stuffs
 - Day 15 - 🏦 Created Banking System in C Programming
-- Day 16 - ❓ TBA
+- Day 16 - ⚜️ Created MNHS Scout Portal Website
+- Day 17 - ❓ TBA
