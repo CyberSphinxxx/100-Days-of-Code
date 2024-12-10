@@ -6,7 +6,149 @@
     <title>Cagayan de Oro Store Locator</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="/logs/Day20/maps/maps.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #f1f8ff;
+            --text-color: #333;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        #search-input {
+            width: 60%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #search-input:focus {
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+        }
+
+        #search-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #search-button:hover {
+            background-color: #2980b9;
+        }
+
+        .content {
+            display: flex;
+            gap: 2rem;
+            height: 600px;
+        }
+
+        .stores-list {
+            flex: 1;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow-y: auto;
+        }
+
+        .stores-list h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        #stores {
+            list-style-type: none;
+        }
+
+        #stores li {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        #stores li:hover {
+            background-color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .view-on-map {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .view-on-map:hover {
+            background-color: #2980b9;
+        }
+
+        .map-container {
+            flex: 2;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -25,19 +167,60 @@
                     <p id="no-results" class="hidden">No stores found. Please try a different search.</p>
                 </div>
                 <div class="map-container">
-                    <iframe
-                        id="map"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        loading="lazy"
-                        allowfullscreen
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126192.02531192069!2d124.57352778359377!3d8.481969899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2f8a1e934bf%3A0x4a6670d2ae12e0c1!2sCagayan%20de%20Oro%2C%20Misamis%20Oriental%2C%20Philippines!5e0!3m2!1sen!2s!4v1621436591910!5m2!1sen!2s">
-                    </iframe>
+                    <div id="map"></div>
                 </div>
             </div>
         </main>
     </div>
-    <script src="/logs/Day20/maps/maps.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const stores = [
+            { name: 'SM City Cagayan de Oro', address: 'Masterson Avenue, Upper Carmen, Cagayan de Oro City', lat: 8.4829, lng: 124.6266 },
+            { name: 'Centrio Mall', address: 'Claro M. Recto Avenue, Cagayan de Oro City', lat: 8.4820, lng: 124.6451 },
+            { name: 'Gaisano City Mall', address: 'Corrales Avenue, Cagayan de Oro City', lat: 8.4825, lng: 124.6458 },
+            { name: 'Limketkai Center', address: 'Limketkai Drive, Cagayan de Oro City', lat: 8.4857, lng: 124.6577 },
+            { name: 'Robinsons Cagayan de Oro', address: 'Rosario Crescent, Limketkai Center, Cagayan de Oro City', lat: 8.4835, lng: 124.6568 },
+        ];
+
+        const storesList = document.getElementById('stores');
+        const map = L.map('map').setView([8.4819, 124.6459], 13);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        function displayStores(storeArray) {
+            storesList.innerHTML = '';
+            storeArray.forEach((store, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <strong>${store.name}</strong><br>
+                    ${store.address}<br>
+                    <button class="view-on-map" data-lat="${store.lat}" data-lng="${store.lng}">View on Map</button>
+                `;
+                storesList.appendChild(li);
+            });
+            addMapButtonListeners();
+        }
+
+        function addMapButtonListeners() {
+            const mapButtons = document.querySelectorAll('.view-on-map');
+            mapButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const lat = parseFloat(e.target.getAttribute('data-lat'));
+                    const lng = parseFloat(e.target.getAttribute('data-lng'));
+                    updateMap(lat, lng);
+                });
+            });
+        }
+
+        function updateMap(lat, lng) {
+            map.setView([lat, lng], 15); // Center map on the store's location
+            L.marker([lat, lng]).addTo(map); // Add a marker for the store
+        }
+
+        displayStores(stores); // Display initial stores
+    </script>
 </body>
 </html>
