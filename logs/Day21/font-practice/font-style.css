@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(42, 42, 84);
+}
+
+h1 {
+    font-size: 3em;
+    color: goldenrod;
+}
+
+h2 {
+    font-size: 2em;
+    color: goldenrod;
+    margin-bottom: 20px;
+}
+
+a{
+    color: inherit;
+}
+
+a:hover{
+    color: gold;
+}
+
+.font-style{
+    font-size: 2em;
+    color: goldenrod;
+    line-height: 1.5;
+    transition: color 1s ease, transform 1s ease;
+    margin-left: 90px;
+}
+
+.font-style:hover{
+    line-height: 1.5;
+    transform: scale(1.1);
+    color: rgb(38, 238, 35);
+}
+
+.f1 {
+    font-family: 'Agu Display';
+}
+
+.f2 {
+    font-family: "Playwrite PT Guides";
+}
+
+.f3{
+    font-family: "Badeen Display";
+}
+
+.f4 {
+    font-family: "Rock 3D",;
+}
+
+.f5 {
+    font-family: "Silkscreen";
+}
