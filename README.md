@@ -34,3 +34,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 16 - ⚜️ Created MNHS Scout Portal Website
 - Day 17 - 🏦 Continue on Banking System in C Programming
 - Day 18 - 🤵 Web Portfolio Practice
+- Day 19 - 📝 Created some HTML Notes
