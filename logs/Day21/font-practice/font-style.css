@@ -37,6 +37,7 @@ a:hover{
 
 .f1 {
     font-family: 'Agu Display';
+    color: red;
 }
 
 .f2 {
@@ -53,4 +54,18 @@ a:hover{
 
 .f5 {
     font-family: "Silkscreen";
+}
+
+.f6{
+    font-family: "Nosifer";
+
+}
+
+
+.f7{
+    font-family: "Eater";
+}
+
+.f8{
+    font-family: "Danfo";
 }
