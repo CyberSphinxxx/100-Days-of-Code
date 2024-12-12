@@ -27,27 +27,27 @@ h1 {
     transition: .5s ease;
 }
 
-.b1 {
+.solid {
     background-color: aquamarine;
     border: 10px solid;
 }
 
-.b2 {
+.dashed {
     background-color: rgb(174, 255, 124);
     border: 10px dashed;
 }
 
-.b3 {
+.dotted {
     background-color: rgb(255, 204, 153);
     border: 10px dotted;
 }
 
-.b4 {
+.double {
     background-color: rgb(255, 153, 204);
     border: 10px double;
 }
 
-.b5 {
+.groove {
     background-color: rgb(153, 255, 204);
     border: 10px groove;
 }
