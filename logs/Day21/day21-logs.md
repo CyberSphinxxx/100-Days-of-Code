@@ -25,6 +25,7 @@
    - Example for `@import` in CSS:
      ```css
      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+     
      ```
 5. Apply the font in your CSS:
    ```css
