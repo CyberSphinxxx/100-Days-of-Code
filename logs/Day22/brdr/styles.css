@@ -56,3 +56,13 @@ h1 {
     background-color: rgb(153, 255, 204);
     border: 10px ridge;
 }
+
+.inset {
+    background-color: rgb(153, 255, 204);
+    border: 10px inset rgb(239, 135, 255);
+}
+
+.outset {
+    background-color: rgb(153, 255, 204);
+    border: 10px outset rgb(143, 171, 255);
+}
