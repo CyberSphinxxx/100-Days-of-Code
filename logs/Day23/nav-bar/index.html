@@ -36,6 +36,12 @@
             username = document.getElementById("username").value;
             alert("Hello " + username + ", Welcome!");
         }
+
+        document.getElementById("reset-btn").onclick = function() {
+            document.getElementById("username").value = "";
+            document.getElementById("user-greet").textContent = "";
+        };
     </script>
 </body>
 </html>
+
