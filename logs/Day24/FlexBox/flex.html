@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main-boxxes-container{
+            background-color: red;
+            padding: 10px;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .box-container{
+            background-color: aquamarine;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            justify-content: center;
+        }
+
+        .box1 {
+            background-color: lightcoral;
+        }
+
+        .box2 {
+            background-color: lightblue;
+        }
+
+        .box3 {
+            background-color: lightgreen;
+        }
+
+        .box4 {
+            background-color: lightyellow;
+        }
+
+        .box5 {
+            background-color: lightseagreen;
+        }
+
+        .boxx-container{
+            margin-top: 10px;
+            background-color: aquamarine;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+            justify-content: center;
+            width: fit-content;
+        }
+
+        .boxx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        
+        .boxx1 {
+            background-color: lightcoral;
+        }
+
+        .boxx2 {
+            background-color: lightblue;
+        }
+
+        .boxx3 {
+            background-color: lightgreen;
+        }
+
+        .boxx4 {
+            background-color: lightyellow;
+        }
+
+        .boxx5 {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox Playground</h1>
+    
+    <div class="main-boxxes-container">
+        <div class="box-container">
+            <div class="box box1">Box 1</div>
+            <div class="box box2">Box 2</div>
+            <div class="box box3">Box 3</div>
+            <div class="box box4">Box 4</div>
+            <div class="box box5">Box 5</div>
+        </div>
+    
+        <div class="boxx-container">
+            <div class="boxx boxx1">Box 1</div>
+            <div class="boxx boxx2">Box 2</div>
+            <div class="boxx boxx3">Box 3</div>
+            <div class="boxx boxx4">Box 4</div>
+            <div class="boxx boxx5">Box 5</div>
+        </div>
+    </div>
+</body>
+</html>
