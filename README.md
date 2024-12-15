@@ -39,3 +39,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 21 - 💬 Font Practice
 - Day 22 - 📦 CSS Border Practice
 - Day 23 - 📃 Hands-on Exam in Intro to Human Computer Interaction
+- Day 24 - 📦 CSS Box and Text Shadow Practice
