@@ -8,6 +8,8 @@
 - [These CSS PRO Tips & Tricks Will Blow Your Mind!](https://youtu.be/PL3Odw-k8W4)
 - [Learn CSS borders in 4 minutes!](https://youtu.be/pkNdQ7TmxIw)
 - [CSS Flexbox in 100 Seconds](https://youtu.be/K74l26pE4YA)
+- [Master Flexbox in Minutes: The ULTIMATE Guide!](https://youtu.be/uzdWgeLHV3k)
+
 
 ## HTML Resources
 
