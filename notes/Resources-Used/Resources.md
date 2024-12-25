@@ -24,6 +24,7 @@
 ## Arduino Uno
 
 - [You can learn Arduino in 15 minutes](https://youtu.be/nL34zDTPkcs)
+- [Arduino in 100 Seconds](https://youtu.be/1ENiVwk8idM)
 
 ## Sites Used For Research
 
