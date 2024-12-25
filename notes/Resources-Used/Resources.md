@@ -23,6 +23,7 @@
 
 ## Arduino Uno
 
+- [Workbench Essentials When Starting Arduino! (Beginner Guide)](https://youtu.be/kWFXAqv2ZKw)
 - [You can learn Arduino in 15 minutes](https://youtu.be/nL34zDTPkcs)
 - [Arduino in 100 Seconds](https://youtu.be/1ENiVwk8idM)
 
