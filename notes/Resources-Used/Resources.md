@@ -21,6 +21,10 @@
 - [100+ JavaScript Concepts you Need to Know](https://youtu.be/lkIFF4maKMU)
 
 
+## Arduino Uno
+
+- [You can learn Arduino in 15 minutes](https://youtu.be/nL34zDTPkcs)
+
 ## Sites Used For Research
 
 - [Make text not copyable HTML](https://stackoverflow.com/questions/43203673/make-text-not-copyable-html)
