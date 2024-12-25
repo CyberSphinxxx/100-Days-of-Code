@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Pages - Improved Inventory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .game-area {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .character-panel {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            margin-right: 20px;
+        }
+        .story-area {
+            flex: 2;
+            min-width: 300px;
+        }
+        .choices-panel {
+            margin-top: 20px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #inventory {
+            margin-top: 10px;
+        }
+        .inventory-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .inventory-item:hover {
+            background-color: #e9e9e9;
+        }
+        .item-description {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .use-item {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .use-item:hover {
+            background-color: #007B9A;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lost Pages</h1>
+        <div class="game-area">
+            <div class="character-panel">
+                <h2>Character</h2>
+                <p>Name: <span id="char-name">Hero</span></p>
+                <p>HP: <span id="char-hp">100</span></p>
+                <p>Mana: <span id="char-mana">50</span></p>
+                <div id="inventory">
+                    <h3>Inventory</h3>
+                    <div id="inventory-list"></div>
+                </div>
+            </div>
+            <div class="story-area">
+                <p id="story-text">You find yourself in a mysterious world, surrounded by ancient ruins and lush forests. What will you do?</p>
+                <div class="choices-panel">
+                    <button onclick="makeChoice('explore')">Explore Ruins</button>
+                    <button onclick="makeChoice('forest')">Enter Forest</button>
+                    <button onclick="makeChoice('rest')">Rest</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const character = {
+            name: "Hero",
+            hp: 100,
+            mana: 50,
+            inventory: []
+        };
+
+        const items = {
+            "Ancient Amulet": {
+                description: "A mysterious amulet that glows faintly. It seems to enhance your magical abilities.",
+                use: function() {
+                    character.mana += 20;
+                    return "You feel a surge of magical energy. Your mana increases by 20!";
+                }
+            },
+            "Healing Herbs": {
+                description: "A bundle of rare herbs known for their healing properties.",
+                use: function() {
+                    character.hp += 30;
+                    return "You apply the herbs to your wounds. You recover 30 HP!";
+                }
+            },
+            "Rusty Key": {
+                description: "An old, rusty key. It might unlock something important.",
+                use: function() {
+                    return "You examine the key, but can't use it right now. It might be useful later.";
+                }
+            }
+        };
+
+        const storyElements = {
+            explore: {
+                text: "You venture into the ancient ruins. The air is thick with dust and mystery.",
+                choices: [
+                    { text: "Search for artifacts", action: "searchArtifacts" },
+                    { text: "Decipher wall inscriptions", action: "decipherWall" },
+                    { text: "Leave ruins", action: "leaveRuins" }
+                ]
+            },
+            forest: {
+                text: "The forest is dense and filled with strange sounds. You feel a magical presence.",
+                choices: [
+                    { text: "Follow the magical trail", action: "followMagic" },
+                    { text: "Gather herbs", action: "gatherHerbs" },
+                    { text: "Return to the entrance", action: "returnEntrance" }
+                ]
+            },
+            rest: {
+                text: "You decide to rest and recover your strength.",
+                choices: [
+                    { text: "Meditate", action: "meditate" },
+                    { text: "Set up camp", action: "setCamp" },
+                    { text: "Keep moving", action: "keepMoving" }
+                ]
+            }
+        };
+
+        function updateCharacterDisplay() {
+            document.getElementById('char-name').textContent = character.name;
+            document.getElementById('char-hp').textContent = character.hp;
+            document.getElementById('char-mana').textContent = character.mana;
+            
+            const inventoryList = document.getElementById('inventory-list');
+            inventoryList.innerHTML = '';
+            character.inventory.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'inventory-item';
+                itemDiv.innerHTML = `
+                    <strong>${item}</strong>
+                    <p class="item-description">${items[item].description}</p>
+                    <button class="use-item" onclick="useItem('${item}')">Use</button>
+                `;
+                inventoryList.appendChild(itemDiv);
+            });
+        }
+
+        function updateStory(text) {
+            document.getElementById('story-text').textContent = text;
+        }
+
+        function updateChoices(choices) {
+            const choicesPanel = document.querySelector('.choices-panel');
+            choicesPanel.innerHTML = '';
+            choices.forEach(choice => {
+                const button = document.createElement('button');
+                button.textContent = choice.text;
+                button.onclick = () => makeChoice(choice.action);
+                choicesPanel.appendChild(button);
+            });
+        }
+
+        function useItem(itemName) {
+            if (character.inventory.includes(itemName)) {
+                const result = items[itemName].use();
+                updateStory(result);
+                if (itemName !== "Ancient Amulet") {  // Ancient Amulet is not consumed on use
+                    character.inventory = character.inventory.filter(item => item !== itemName);
+                }
+                updateCharacterDisplay();
+            }
+        }
+
+        function makeChoice(action) {
+            switch(action) {
+                case 'explore':
+                case 'forest':
+                case 'rest':
+                    updateStory(storyElements[action].text);
+                    updateChoices(storyElements[action].choices);
+                    break;
+                case 'searchArtifacts':
+                    if (!character.inventory.includes('Ancient Amulet')) {
+                        character.inventory.push('Ancient Amulet');
+                        updateStory("You found an Ancient Amulet! It has been added to your inventory.");
+                    } else {
+                        updateStory("You search thoroughly but find nothing new this time.");
+                    }
+                    updateChoices(storyElements.explore.choices);
+                    break;
+                case 'decipherWall':
+                    character.mana -= 5;
+                    if (!character.inventory.includes('Rusty Key')) {
+                        character.inventory.push('Rusty Key');
+                        updateStory("You spend time deciphering the wall. You learn ancient secrets but lose some mana. You also find a Rusty Key!");
+                    } else {
+                        updateStory("You spend time deciphering more of the wall. You learn more secrets but lose some mana.");
+                    }
+                    updateChoices(storyElements.explore.choices);
+                    break;
+                case 'leaveRuins':
+                    updateStory("You leave the ruins and return to the starting point.");
+                    updateChoices([
+                        { text: "Explore Ruins", action: "explore" },
+                        { text: "Enter Forest", action: "forest" },
+                        { text: "Rest", action: "rest" }
+                    ]);
+                    break;
+                case 'followMagic':
+                    character.mana += 20;
+                    updateStory("You follow the magical trail and discover a hidden spring. Your mana increases significantly!");
+                    updateChoices(storyElements.forest.choices);
+                    break;
+                case 'gatherHerbs':
+                    if (!character.inventory.includes('Healing Herbs')) {
+                        character.inventory.push('Healing Herbs');
+                        updateStory("You gather some healing herbs. They have been added to your inventory.");
+                    } else {
+                        updateStory("You look for herbs but can't find any new ones this time.");
+                    }
+                    updateChoices(storyElements.forest.choices);
+                    break;
+                case 'returnEntrance':
+                    updateStory("You return to the forest entrance.");
+                    updateChoices([
+                        { text: "Explore Ruins", action: "explore" },
+                        { text: "Enter Forest", action: "forest" },
+                        { text: "Rest", action: "rest" }
+                    ]);
+                    break;
+                case 'meditate':
+                    character.mana += 15;
+                    updateStory("You meditate and feel your magical energy restore.");
+                    updateChoices(storyElements.rest.choices);
+                    break;
+                case 'setCamp':
+                    character.hp += 20;
+                    updateStory("You set up camp and get some rest. Your HP increases.");
+                    updateChoices(storyElements.rest.choices);
+                    break;
+                case 'keepMoving':
+                    updateStory("You decide to keep moving. What's your next destination?");
+                    updateChoices([
+                        { text: "Explore Ruins", action: "explore" },
+                        { text: "Enter Forest", action: "forest" },
+                        { text: "Rest", action: "rest" }
+                    ]);
+                    break;
+            }
+            updateCharacterDisplay();
+        }
+
+        // Initialize the game
+        updateCharacterDisplay();
+    </script>
+</body>
+</html>
+
