@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(44, 43, 72);
+    font-family: "Quicksand", serif;
+}
+
+.main-title {
+    font-size: 50px;
+    color: gold;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    transition: ease .3s;
+}
+
+.container:hover {
+    transform: translate(3%);
+    transition: ease .3s;
+}
+
+.container-subtitle {
+    font-size: 20px;
+}
+
