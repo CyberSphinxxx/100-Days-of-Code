@@ -19,6 +19,7 @@
 
 ## Javascript Resource
 - [100+ JavaScript Concepts you Need to Know](https://youtu.be/lkIFF4maKMU)
+- [JavaScript Full Course for free 🌐 (2024)](https://youtu.be/lfmg-EJ8gm4)
 
 
 ## Arduino Uno
