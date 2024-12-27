@@ -45,3 +45,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 27 - 📦 Practiced Navbar CSS
 - Day 28 - 🧭 Practiced on how to do nav bar properly
 - Day 29 - 🧭 Nav learning continuation
+- Day 30 - 🔑 Continued working on PassVault
