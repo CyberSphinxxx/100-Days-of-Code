@@ -49,3 +49,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 31 - 💻 Learning Javascript Function()
 - Day 32 - 💻 Learning Objecr Literal in Javascript
 - Day 33 - 💻 Continuation on Learning Javascript
+- Day 34 - 🧭 Navbar Practice
