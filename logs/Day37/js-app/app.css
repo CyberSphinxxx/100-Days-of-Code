@@ -1,0 +1,156 @@
+
+body {
+    background-color: rgb(39, 39, 65);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(39, 39, 65);
+    margin-right: auto;
+}
+
+.navbar-ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    cursor: pointer;
+}
+
+.navbar-li {
+    margin: 0 15px;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.navbar-li a {
+    text-decoration: none;
+    color: rgb(39, 39, 65);
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.navbar-li a:hover {
+    color: rgb(100, 100, 150);
+}
+
+.navbar-li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: antiquewhite;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-li:hover .dropdown {
+    display: block;
+}
+
+.card-container {
+    background-color: white;
+    border-radius: 15px;
+    margin: 50px;
+    padding: 20px;
+    transition: ease-in-out .5s;
+}
+
+.card-container:hover {
+    translate: 20px;
+    transition: ease-in-out .5s;
+}
+
+.login {
+    background-color: white;
+    max-width: 400px; 
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: rgb(39, 39, 65);
+}
+
+.login label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    display: block;
+    color: #333;
+}
+
+.login input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    width: calc(100% - 20px);
+    font-size: 1em;
+}
+
+.button-group {
+    text-align: center; 
+    margin-top: 15px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    font-size: 1em;
+}
+
+#submit-btn {
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#reset-btn {
+    background-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    opacity: 0.9;
+}
