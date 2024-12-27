@@ -40,3 +40,15 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 22 - 📦 CSS Border Practice
 - Day 23 - 📃 Hands-on Exam in Intro to Human Computer Interaction
 - Day 24 - 📦 CSS Box and Text Shadow Practice
+- Day 25 - 🍵 Played with Java
+- Day 26 - 🔑 Worked on PassVault, a Final Project for OOP Subject
+- Day 27 - 📦 Practiced Navbar CSS
+- Day 28 - 🧭 Practiced on how to do nav bar properly
+- Day 29 - 🧭 Nav learning continuation
+- Day 30 - 🔑 Continued working on PassVault
+- Day 31 - 💻 Learning Javascript Function()
+- Day 32 - 💻 Learning Objecr Literal in Javascript
+- Day 33 - 💻 Continuation on Learning Javascript
+- Day 34 - 🧭 Navbar Practice
+- Day 35 - 💻 Practice on document.getElementById in Javascript
+- Day 36 - 💣 Created a game called Infinity Sweeper with the help of AI https://infinity-sweeper.vercel.app
