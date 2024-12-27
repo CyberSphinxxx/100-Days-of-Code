@@ -43,3 +43,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 25 - 🍵 Played with Java
 - Day 26 - 🔑 Worked on PassVault, a Final Project for OOP Subject
 - Day 27 - 📦 Practiced Navbar CSS
+- dAY 28 - 🧭 Practiced on how to do nav bar properly
