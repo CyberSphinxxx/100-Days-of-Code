@@ -50,3 +50,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 32 - 💻 Learning Objecr Literal in Javascript
 - Day 33 - 💻 Continuation on Learning Javascript
 - Day 34 - 🧭 Navbar Practice
+- Day 35 - 💻 Practice on document.getElementById in Javascript
