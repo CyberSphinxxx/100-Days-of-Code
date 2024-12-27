@@ -51,3 +51,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 33 - 💻 Continuation on Learning Javascript
 - Day 34 - 🧭 Navbar Practice
 - Day 35 - 💻 Practice on document.getElementById in Javascript
+- Day 36 - 💣 Created a game called Infinity Sweeper with the help of AI https://infinity-sweeper.vercel.app
