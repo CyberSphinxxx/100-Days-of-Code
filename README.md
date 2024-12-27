@@ -47,3 +47,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 29 - 🧭 Nav learning continuation
 - Day 30 - 🔑 Continued working on PassVault
 - Day 31 - 💻 Learning Javascript Function()
+- Day 32 - 💻 Learning Objecr Literal in Javascript
