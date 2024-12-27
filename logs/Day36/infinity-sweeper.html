@@ -16,7 +16,7 @@
             --cell-bg: #bdc3c7;
             --cell-revealed: #fff;
             --leaderboard-bg: #f5f6fa;
-            --border: #dcdde1;
+            --border: #95a5a6;
         }
 
         .theme-dark {
@@ -29,7 +29,7 @@
             --cell-bg: #485460;
             --cell-revealed: #636e72;
             --leaderboard-bg: #353b48;
-            --border: #485460;
+            --border: #dcdde1;
         }
 
         .theme-nature {
@@ -42,7 +42,7 @@
             --cell-bg: #a8e6cf;
             --cell-revealed: #e8fdf5;
             --leaderboard-bg: #e8fdf5;
-            --border: #a8e6cf;
+            --border: #27ae60;
         }
 
         .theme-ocean {
@@ -55,7 +55,7 @@
             --cell-bg: #c7ecee;
             --cell-revealed: #e8f6ff;
             --leaderboard-bg: #e8f6ff;
-            --border: #c7ecee;
+            --border: #0097e6;
         }
 
         * {
@@ -70,6 +70,9 @@
             color: var(--text);
             min-height: 100vh;
             transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
@@ -82,6 +85,7 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         .game-section {
@@ -141,12 +145,16 @@
         }
 
         .theme-btn {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             border: 2px solid var(--border);
             cursor: pointer;
-            transition: transform 0.2s ease;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
         }
 
         .theme-btn:hover {
@@ -171,6 +179,7 @@
             border-radius: 4px;
             width: fit-content;
             margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .cell {
@@ -367,6 +376,13 @@
             opacity: 1;
         }
 
+        .toggle-leaderboard {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
         @media (max-width: 968px) {
             .container {
                 flex-direction: column;
@@ -406,6 +422,7 @@
                 <input type="text" id="login-username" placeholder="Username" class="auth-input">
                 <input type="password" id="login-password" placeholder="Password" class="auth-input">
                 <button onclick="login()">Login</button>
+                <button onclick="playWithoutAccount()">Play without account</button>
                 <div class="auth-switch">
                     <p>Don't have an account? <a href="#" onclick="toggleAuthForm()">Register</a></p>
                 </div>
@@ -422,6 +439,8 @@
         </div>
     </div>
 
+    <button class="toggle-leaderboard" onclick="toggleLeaderboard()">Show Leaderboard</button>
+
     <div class="container">
         <div class="game-section">
             <div class="game-header">
@@ -433,10 +452,10 @@
             </div>
 
             <div class="theme-selector">
-                <button class="theme-btn default active" onclick="setTheme('default')" title="Default Theme"></button>
-                <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark Theme"></button>
-                <button class="theme-btn nature" onclick="setTheme('nature')" title="Nature Theme"></button>
-                <button class="theme-btn ocean" onclick="setTheme('ocean')" title="Ocean Theme"></button>
+                <button class="theme-btn default active" onclick="setTheme('default')" title="Default Theme">🌞</button>
+                <button class="theme-btn dark" onclick="setTheme('dark')" title="Dark Theme">🌙</button>
+                <button class="theme-btn nature" onclick="setTheme('nature')" title="Nature Theme">🌿</button>
+                <button class="theme-btn ocean" onclick="setTheme('ocean')" title="Ocean Theme">🌊</button>
             </div>
 
             <div class="control-group">
@@ -460,7 +479,6 @@
 
             <div class="game-info">
                 <div class="info-item" id="score">Score: 0</div>
-                <div class="info-item" id="timer">Time: 0s</div>
                 <div class="info-item" id="mines-left">Mines: 0</div>
             </div>
 
@@ -470,7 +488,6 @@
         <div class="leaderboard-section">
             <div class="leaderboard-header">
                 <h2 class="leaderboard-title">Leaderboard</h2>
-                <button onclick="toggleLeaderboard()">Hide/Show</button>
             </div>
             <div id="leaderboard-content">
                 <select id="leaderboard-sort" onchange="updateLeaderboard()">
@@ -493,11 +510,10 @@
         let flagged = [];
         let gameOver = false;
         let score = 0;
-        let timer = 0;
-        let timerInterval;
-        let currentUser = null;
         let firstClick = true;
         let difficulty = 'medium';
+        let currentUser = null;
+        let leaderboardVisible = true;
 
         function setTheme(theme) {
             document.body.className = `theme-${theme}`;
@@ -509,8 +525,24 @@
         }
 
         function toggleLeaderboard() {
-            const leaderboardContent = document.getElementById('leaderboard-content');
-            leaderboardContent.style.display = leaderboardContent.style.display === 'none' ? 'block' : 'none';
+            const leaderboardSection = document.querySelector('.leaderboard-section');
+            const gameSection = document.querySelector('.game-section');
+            const container = document.querySelector('.container');
+            const toggleButton = document.querySelector('.toggle-leaderboard');
+
+            leaderboardVisible = !leaderboardVisible;
+
+            if (leaderboardVisible) {
+                leaderboardSection.style.display = 'block';
+                gameSection.style.flex = '1.5';
+                container.style.justifyContent = 'space-between';
+                toggleButton.textContent = 'Hide Leaderboard';
+            } else {
+                leaderboardSection.style.display = 'none';
+                gameSection.style.flex = '1';
+                container.style.justifyContent = 'center';
+                toggleButton.textContent = 'Show Leaderboard';
+            }
         }
 
         function toggleAuthForm() {
@@ -554,12 +586,8 @@
             grid = [];
             revealed = [];
             flagged = [];
-            clearInterval(timerInterval);
-            timer = 0;
             score = 0;
-            updateTimer();
             updateScore();
-            timerInterval = setInterval(updateTimer, 1000);
 
             mineCount = Math.floor(gridSize * gridSize * getDifficultyMultiplier());
             updateMinesLeft();
@@ -641,7 +669,6 @@
                     cell.textContent = grid[row][col];
                     score++;
                 } else {
-                    score++;
                     for (let dx = -1; dx <= 1; dx++) {
                         for (let dy = -1; dy <= 1; dy++) {
                             if (row + dx >= 0 && row + dx < gridSize && col + dy >= 0 && col + dy < gridSize && !revealed[row + dx][col + dy]) {
@@ -701,13 +728,49 @@
             }
 
             if (revealedCount === gridSize * gridSize - mineCount || correctFlagCount === mineCount) {
-                endGame(true);
+                continueGame();
             }
+        }
+
+        function continueGame() {
+            // Increase difficulty
+            mineCount = Math.floor(mineCount * 1.2);
+            
+            // Clear the grid
+            for (let i = 0; i < gridSize; i++) {
+                for (let j = 0; j < gridSize; j++) {
+                    grid[i][j] = 0;
+                    revealed[i][j] = false;
+                    flagged[i][j] = false;
+                }
+            }
+
+            // Place new mines
+            for (let i = 0; i < mineCount; i++) {
+                let x, y;
+                do {
+                    x = Math.floor(Math.random() * gridSize);
+                    y = Math.floor(Math.random() * gridSize);
+                } while (grid[x][y] === -1);
+                grid[x][y] = -1;
+
+                for (let dx = -1; dx <= 1; dx++) {
+                    for (let dy = -1; dy <= 1; dy++) {
+                        if (x + dx >= 0 && x + dx < gridSize && y + dy >= 0 && y + dy < gridSize && grid[x + dx][y + dy] !== -1) {
+                            grid[x + dx][y + dy]++;
+                        }
+                    }
+                }
+            }
+
+            // Update UI
+            renderGrid();
+            updateMinesLeft();
+            showNotification('Level cleared! Continuing with increased difficulty...');
         }
 
         function endGame(won) {
             gameOver = true;
-            clearInterval(timerInterval);
 
             if (won) {
                 showNotification(`Congratulations! You won with a score of ${score}. Starting a new game...`);
@@ -722,11 +785,6 @@
             document.getElementById('score').textContent = `Score: ${score}`;
         }
 
-        function updateTimer() {
-            timer++;
-            document.getElementById('timer').textContent = `Time: ${timer}s`;
-        }
-
         function saveScore() {
             if (currentUser) {
                 const users = JSON.parse(localStorage.getItem('infinitySweeperUsers') || '{}');
@@ -735,7 +793,6 @@
                 }
                 users[currentUser].scores.push({
                     score: score,
-                    time: timer,
                     gridSize: gridSize,
                     difficulty: difficulty
                 });
@@ -813,7 +870,7 @@
             
             scores.slice(0, 10).forEach((score, index) => {
                 const li = document.createElement('div');
-                li.className = 'leaderboard-item';
+                li.className = 'leaderboard-item';li.className = 'leaderboard-item';
                 li.innerHTML = `
                     <span class="leaderboard-rank">#${index + 1}</span>
                     <span class="leaderboard-name">${score.username}</span>
@@ -832,6 +889,13 @@
             }, 3000);
         }
 
+        function playWithoutAccount() {
+            currentUser = null;
+            document.getElementById('login-register').style.display = 'none';
+            document.getElementById('username-display').textContent = 'Guest';
+            initGame();
+        }
+
         // Load saved theme
         const savedTheme = localStorage.getItem('infinitySweeperTheme');
         if (savedTheme) {
@@ -845,8 +909,11 @@
                 document.getElementById('username-display').textContent = `Welcome, ${currentUser}!`;
                 updateLeaderboard();
                 initGame();
+            } else {
+                document.getElementById('login-register').style.display = 'flex';
             }
         };
     </script>
 </body>
 </html>
+
