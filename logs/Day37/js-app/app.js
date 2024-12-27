@@ -10,4 +10,5 @@ document.getElementById('submit-btn').onclick = function(){
 document.getElementById('reset-btn').onclick = function(){
 
     document.getElementById('greet-username').textContent = '';
+    document.getElementById('username-input').value = '';
 };
