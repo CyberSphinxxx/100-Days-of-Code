@@ -21,6 +21,7 @@ if (age < 18) {
     if (loginElement) {
         loginElement.remove();
     }
-} else {
+} 
+ else {
     window.alert('You Can Enter');
 }

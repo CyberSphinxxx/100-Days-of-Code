@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>@CAKE</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/cakecable/webDesign1/refs/heads/main/assets/besticons.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="ilovecutethings.lol">
+  <meta property="og:description" content="i love cute things, do you?"> 
+  <meta property="og:image" content="https://raw.githubusercontent.com/cakecable/webDesign1/refs/heads/main/assets/besticons.png">
+  <meta property="og:url" content="https://ilovecutethings.lol/">
+  <meta property="theme-color" content="#f2b8db">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+  <body>
+
+
+
+  <video autoplay loop id="myVideo">
+    <source src="https://github.com/cakecable/webDesign1/raw/refs/heads/main/videos/fireEdit.mp4" type="video/mp4">
+  </video>
+  <p id="rcorners1"></p>
+  <div class="profile-wrapper">
+  <div class="profile-container">
+    <img src="https://github.com/cakecable/webDesign1/blob/main/assets/bestpfp.jpeg?raw=true" alt="Profile Picture" class="profile-pic">
+  </div>
+  <div class="accessories">
+    <div class="accessory" style="background-image: url('https://github.com/cakecable/webDesign1/blob/main/assets/31ACF3FE-3EEA-44E4-B76A-E753A2DAD011.png?raw=true');"></div>
+  </div>
+  <div class="profile-name">cake</div>
+</div>
+
+  <body>
+  <div class="status-card">
+    <p class="title">Coding</p>
+    <div class="content">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/pyimg.png?raw=true" alt="HTML Icon" class="icon">
+      <div class="details">
+        <p class="main-text">Visual Studio Code</p>
+        <p class="sub-text">Editing main.py</p>
+        <p class="sub-text">Workspace: root [SHH: simple_bot1]</p>
+      </div>
+    </div>
+    <h1 id="specialties" class="elapse">Elapse: </h1>
+    <div class="footer">
+      <span id="timer" class="timer">00:00:00</span>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+  
+  
+  <div class="nav-bar">
+    <a href="https://github.com/cakecable" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/github.png?raw=true" alt="Github">
+      <span class="tooltip">GitHub</span>
+    </a>
+    <a href="https://discordapp.com/users/1078313475727691787" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/discord.png?raw=true" alt="Discord">
+      <span class="tooltip">Discord</span>
+    </a>
+    <a href="https://roblox.com" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/roblox.png?raw=true" alt="Roblox">
+      <span class="tooltip">Roblox</span>
+    </a>
+    <a href="https://open.spotify.com/user/3r1swupysntwph40fvw1aypcq" class="nav-icon">
+      <img src="https://github.com/cakecable/webDesign1/blob/main/assets/spotify.png?raw=true" alt="Spotify">
+      <span class="tooltip">Spotify</span>
+    </a>
+  </div>
+  
+  
+  
+  </body>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+    body {
+      margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+      overflow: hidden;
+    }
+
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .nav-bar {
+      display: flex;
+      position: fixed;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: space-around;
+      align-items: center;
+      background-color: #121314;
+      width: 260px;
+      height: 50px;
+      border-radius: 50px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(0, 0, 0, 0.5) 5px 10px 15px;
+      opacity: 0.67;
+      transition: all 0.5s;
+      z-index: 1;
+    }
+
+    .nav-icon {
+      position: relative;
+      margin: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .nav-icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-icon img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-icon .tooltip {
+      position: absolute;
+      bottom: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #121314;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .nav-icon:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-bar:hover {
+      width: 300px;
+      transition: all 0.5s;
+    }
+    .title-container:hover {
+        font-size: 50px;
+        transition: all 0.5s;
+    }
+  </style>
+  <style>
+  
+  #rcorners1 {
+      display: flex;
+      position: fixed;
+      bottom: 15%;
+      left: 50%;
+      justify-content: space-around;
+      transform: translateX(-50%);
+      border-radius: 25px;
+      background: #000000;
+      width: 800px;
+      height: 500px;
+      opacity: 0.6;
+  }
+
+.profile-wrapper {
+  position: fixed; /* Allows you to move the entire setup */
+  top: 15%; /* Adjust vertical position */
+  left: 25%; /* Adjust horizontal position */
+  width: 150px;
+  height: 150px;
+  z-index: 10; /* Controls stacking order for the entire wrapper */
+}
+
+.profile-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden; /* Only the profile picture is clipped */
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the image proportional */
+}
+
+.accessories {
+  position: absolute; /* Ensures it overlays the profile picture */
+  top: 0;
+  left: 0;
+  width: 150px; /* Match profile size */
+  height: 150px;
+  z-index: 11; /* Accessories sit above the profile picture */
+  pointer-events: none; /* Prevent interaction with the accessories */
+}
+
+.accessory {
+  position: absolute;
+  top: -10px; /* Fine-tune positioning of the accessory */
+  left: -10px;
+  width: 170px; /* Adjust size to extend beyond the profile picture */
+  height: 170px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none; /* Makes the accessories non-interactive */
+}
+.profile-name {
+  position: fixed;
+  top: 21.5%;
+  left: 39%; /* Align to the right of the profile */
+  font-family: "Noto Sans JP", serif; /* Same font style */
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Shadow effect */
+  z-index: 12; /* Above other elements */
+}
+
+
+
+  </style>
+  <style>
+  .status-card {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.title {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.details {
+  line-height: 1.5;
+}
+
+.main-text {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.elapse {
+  font-size: 10px;
+  color: #aaaaaa;
+}
+
+.timer {
+  color: #00ff87;
+  font-weight: bold;
+}
+  </style>
+</head>
+  <script>
+    $(function () {
+      var message = "hey come back dumbass";
+      var original;
+
+      $(window).focus(function() {
+        if(original) {
+          document.title = original;
+        }
+      }).blur(function() {
+        var title = $('title').text();
+        if(title != message) {
+          original = title;
+        }
+        document.title = message;
+      });
+    });
+    let startTime = Date.now();
+
+function updateTimer() {
+  const timerElement = document.getElementById('timer');
+  const elapsedTime = Date.now() - startTime;
+
+  const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+  const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+
+  timerElement.textContent = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+setInterval(updateTimer, 1000);
+
+const profileContainer = document.querySelector('.profile-container');
+
+// Function to toggle an accessory
+function toggleAccessory(accessoryUrl) {
+  const existingAccessory = document.querySelector(`.accessory[style*="${accessoryUrl}"]`);
+  
+  if (existingAccessory) {
+    existingAccessory.remove(); // Remove if accessory is already added
+  } else {
+    const accessory = document.createElement('div');
+    accessory.className = 'accessory';
+    accessory.style.backgroundImage = `url('${accessoryUrl}')`;
+    profileContainer.appendChild(accessory);
+  }
+}
+
+// Example usage
+toggleAccessory('hat.png');
+toggleAccessory('glasses.png');
+
+  </script>
+</html>
