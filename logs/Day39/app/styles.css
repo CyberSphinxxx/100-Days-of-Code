@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(45, 45, 69);
+}
+
+.login {
+    background-color: beige;
+    margin: 50px;
+    padding: 20px;
+}
