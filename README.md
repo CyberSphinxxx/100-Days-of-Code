@@ -55,4 +55,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 37 - 💖 Created Aesthetic Linktree https://johnlemargonzales-aesthetic-profile.vercel.app
 - Day 38 - 📝 Created Javascript Notes
 - Day 39 - 💻 Javascript document.getElementById()
-- 
+- Day 40 - 🎆 Created New Year Countdown Timer https://new-year-countdown-timer-murex.vercel.app
