@@ -52,3 +52,8 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 34 - 🧭 Navbar Practice
 - Day 35 - 💻 Practice on document.getElementById in Javascript
 - Day 36 - 💣 Created a game called Infinity Sweeper with the help of AI https://infinity-sweeper.vercel.app
+- Day 37 - 💖 Created Aesthetic Linktree https://johnlemargonzales-aesthetic-profile.vercel.app
+- Day 38 - 📝 Created Javascript Notes
+- Day 39 - 💻 Javascript document.getElementById()
+- Day 40 - 🎆 Created New Year Countdown Timer https://new-year-countdown-timer-murex.vercel.app
+- Day 41 - 🎆 New Year Break | Played with document.getElementById()
