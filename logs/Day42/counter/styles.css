@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(184, 222, 255);
+}
+
+.counterContainer {
+    background-color: beige;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px 100px;
+}
+
+#labelCount {
+    font-size: 60px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btnGroup{
+    padding: 10px;
+}
+
+#decreaseBtn {
+    background-color: lightcoral;
+}
+
+#resetBtn {
+    background-color: lightsalmon;
+}
+
+#increaseBtn {
+    background-color: lightgreen;
+}
