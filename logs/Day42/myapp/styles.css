@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(169, 176, 255);
+}
+
+.main-container {
+    display: block;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.btnGroup {
+    background-color: red;
+    padding: 10px;
+}
+
+#submitBtn, #resetBtn {
+   padding: 2px;
+   border-radius: 5px; 
+}
