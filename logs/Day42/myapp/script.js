@@ -8,7 +8,8 @@ document.getElementById('submitBtn').onclick = function(){
     radius = document.getElementById('numberInput').value;
 
     circumference = 2 * pi * radius;
-    document.getElementById('result').textContent = 'The Circumference of the Circle is: ' + circumference
+    let roundedCircumference = Math.ceil(circumference * 100) / 100;
+    document.getElementById('result').textContent = 'The Circumference of the Circle is: ' + roundedCircumference
     document.getElementById('solution').textContent = 'C = 2 * π ' + '* '+ radius +' = ' + circumference;
 };
 
