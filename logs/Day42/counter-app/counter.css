@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(41, 44, 60);
+}
+
+.counter-container {
+    text-align: center;
+    color: white;
+    background-color: rgb(110, 117, 255);
+    border-radius: 10px;
+    margin: 50px 300px;
+    
+}
+
+#countLabel {
+    font-size: 100px;
+    display: block;
+}
+
+.btn-container{
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+#increaseBtn{
+    background-color: greenyellow;
+}
+
+#decreaseBtn {
+    background-color: lightcoral;
+}
+
+#resetBtn {
+    background-color: orange;
+}
+
+button {
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
