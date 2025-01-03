@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(84, 55, 110);
+    text-align: center;
+    color: white;
+}
+
+.mainContainer{
+    
+}
+
+#dice{
+    background-color: aliceblue;
+    margin: 10px 350px;
+    border-radius: 10px;
+    color: black;
+    font-size: 40px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px ;
+    background-color: rgb(255, 195, 255);
+}
