@@ -9,6 +9,10 @@ submitBtn.onclick = function(){
     if (age >= 18){
         window.alert('You Can Enter')
     }
+
+    else if (age <= 0){
+        window.alert('That is NOT Possible')
+    }
     else {
         window.alert('You Cannot Enter')
     }
