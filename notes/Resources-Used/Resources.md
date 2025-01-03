@@ -29,6 +29,7 @@
 - [Arduino in 100 Seconds](https://youtu.be/1ENiVwk8idM)
 - [Arduino 101- Crash Course w/ Mark Rober](https://youtu.be/yi29dbPnu28)
 - [INSTALLING ACRYLIC CASE TO ARDUINO UNO BOARD](https://youtu.be/_uf6Ix1JJYo)
+- [Arduino Tutorial: LED Sequential Control- Beginner Project](https://youtu.be/e1FVSpkw6q4)
 
 ## Sites Used For Research
 
