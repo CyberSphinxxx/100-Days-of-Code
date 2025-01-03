@@ -1,5 +1,5 @@
 
-/* A simple program to sequentially turn on and turn off 3 LEDs */ 
+/* A simple program to sequentially turn on and turn off 3 LEDs  
 
 int LED1 = 13;
 int LED2 = 12;
@@ -87,3 +87,5 @@ void loop() {
   */
 
 }
+
+*/
