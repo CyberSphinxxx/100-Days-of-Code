@@ -28,6 +28,7 @@
 - [You can learn Arduino in 15 minutes](https://youtu.be/nL34zDTPkcs)
 - [Arduino in 100 Seconds](https://youtu.be/1ENiVwk8idM)
 - [Arduino 101- Crash Course w/ Mark Rober](https://youtu.be/yi29dbPnu28)
+- [INSTALLING ACRYLIC CASE TO ARDUINO UNO BOARD](https://youtu.be/_uf6Ix1JJYo)
 
 ## Sites Used For Research
 
