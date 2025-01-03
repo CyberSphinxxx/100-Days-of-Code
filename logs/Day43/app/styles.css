@@ -1,0 +1,12 @@
+body {
+    background-color: lightcoral;
+    justify-content: center;
+    text-align: center;
+}
+
+.mainContainer  {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px 200px;
+}
