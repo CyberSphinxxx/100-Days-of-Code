@@ -1,16 +1,3 @@
-
-/*
-let age = 10;
-
-if (age < 18){
-    console.log('You Cannot Enter');
-}
-
-else {
-    console.log('You can enter')
-}
-*/
-
 let userAge =  document.getElementById('userAge');
 let submitBtn = document.getElementById('submitBtn');
 let resetBtn = document.getElementById('resetBtn');
