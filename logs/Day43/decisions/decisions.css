@@ -2,7 +2,7 @@ body {
     background-color: rgb(215, 171, 255);
 }
 
-.verifyContainer {
+.verifyContainer, .verifyContainerBtn {
     background-color: rgb(245, 222, 179);
     padding: 10px;
     padding-bottom: 20px;
