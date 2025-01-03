@@ -18,3 +18,16 @@ resetBtn.onclick = function(){
     userAge.value = '';
     age = undefined;
 };
+
+// ============================================================
+
+let yesBtn = document.getElementById('yesBtn');
+let noBtn = document.getElementById('noBtn');
+
+yesBtn.onclick = function(){
+    window.alert('You Can Enter')
+}
+
+noBtn.onclick = function(){
+    window.alert('You Cannot Enter')
+}
