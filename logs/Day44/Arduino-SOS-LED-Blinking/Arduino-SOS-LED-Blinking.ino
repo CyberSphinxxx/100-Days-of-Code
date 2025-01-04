@@ -1,5 +1,5 @@
 
-/* A simple program to sequentially turn on and turn off 3 LEDs  
+/* A simple program to sequentially turn on and turn off 3 LEDs
 
 int LED1 = 13;
 int LED2 = 12;
@@ -71,7 +71,7 @@ void loop() {
   digitalWrite(LED2, LOW);
   digitalWrite(LED3, LOW);     // turn off LED1
 
- /*
+
   digitalWrite(LED1, HIGH);    // turn on LED1 
   delay(100);                  // wait for 200ms
   digitalWrite(LED2, HIGH);    // turn on LED2
@@ -84,8 +84,8 @@ void loop() {
   delay(100);                  // wait for 300ms
   digitalWrite(LED3, LOW);     // turn off LED3
   delay(100);                  // wait for 300ms before running program all over again
-  */
+ 
 
 }
 
-*/
+ */

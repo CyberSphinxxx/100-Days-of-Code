@@ -31,7 +31,6 @@
 - [INSTALLING ACRYLIC CASE TO ARDUINO UNO BOARD](https://youtu.be/_uf6Ix1JJYo)
 - [Arduino Tutorial: LED Sequential Control- Beginner Project](https://youtu.be/e1FVSpkw6q4)
 - [How to Display Custom Characters - Arduino LCD Display](https://youtu.be/r0NVDFI-134)
-- [How to Display Custom Characters - Arduino LCD Display](https://youtu.be/r0NVDFI-134)
 
 ## Sites Used For Research
 
