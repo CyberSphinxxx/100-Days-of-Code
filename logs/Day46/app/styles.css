@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(53, 54, 82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainTitle {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    background-color: beige;
+    padding: 10px;
+    border-radius: 10px;
+}
