@@ -41,3 +41,6 @@
 
 ## Inspirations
 - [Roasting your portfolios #6](https://youtu.be/ufmYccZ5E8M)
+
+## Git
+- [git rebase - Why, When & How to fix conflicts](https://youtu.be/DkWDHzmMvyg)
