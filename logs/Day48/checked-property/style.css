@@ -1,0 +1,39 @@
+body {
+    background-image: url(/logs/Day48/checked-property/pexels-earano-1683888.jpg);
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    background-color: rgba(255, 255, 255, 0.851);
+    border-radius: 15px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 30px;
+}
+
+.subscribeContainer {
+    user-select: none;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    margin: 10px 200px;
+    text-align: center;
+}
+
+.btnGroup {
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
