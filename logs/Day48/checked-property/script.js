@@ -9,5 +9,14 @@ let paymaya         = document.getElementById('paymaya');
 let submitBtn       = document.getElementById('submitBtn');
 let resetBtn        = document.getElementById('resetBtn');
 
-let output          = document.getElementById('output');
+let isUsersubscribed= document.getElementById('isUsersubscribed');
+let paymentOption   = document.getElementById('paymentOption');
 
+submitBtn.onclick = function() {
+    if (subscribeBtn.checked) {
+        isUsersubscribed.textContent = 'You are subscribed';
+    }
+    else {
+        isUsersubscribed.textContent = 'You are NOT subscribed'
+    }
+}
