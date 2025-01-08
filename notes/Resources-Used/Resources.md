@@ -46,3 +46,4 @@
 - [git rebase - Why, When & How to fix conflicts](https://youtu.be/DkWDHzmMvyg)
 - [Never* use git pull](https://www.youtube.com/watch?v=xN1-2p06Urc)
 - [13 Advanced (but useful) Git Techniques and Shortcuts](https://youtu.be/ecK3EnyGD8o)
+- [So You Think You Know Git - FOSDEM 2024](https://youtu.be/aolI_Rz0ZqY)
