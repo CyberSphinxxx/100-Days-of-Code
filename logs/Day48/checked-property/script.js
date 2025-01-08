@@ -40,4 +40,10 @@ submitBtn.onclick = function() {
 resetBtn.onclick = function(){
     isUsersubscribed.textContent = '';
     subscribeBtn.checked = false;
+
+    paymentOption.textContent = '';
+    visaBtn.checked = false;
+    mastercardBtn.checked = false;
+    gcashBtn.checked = false;
+    paymaya.checked = false;
 }
