@@ -31,6 +31,10 @@ body {
     text-align: center;
 }
 
+.subscribeContainer:hover {
+    background-color: rgb(177, 0, 0);
+}
+
 .btnGroup {
     margin: 10px;
     text-align: center;
