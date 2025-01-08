@@ -19,4 +19,25 @@ submitBtn.onclick = function() {
     else {
         isUsersubscribed.textContent = 'You are NOT subscribed'
     }
+
+    if (visaBtn.checked) {
+        paymentOption.textContent = 'You are paying with Visa'
+    }
+    else if (mastercardBtn.checked){
+        paymentOption.textContent = 'You are paying with Mastercard'
+    }
+    else if (gcashBtn.checked){
+        paymentOption.textContent = 'You are paying with Gcash';
+    }
+    else if (paymaya.checked){
+        paymentOption.textContent = 'You are paying with Paymaya';
+    }
+    else {
+        window.alert('You must select a payment option')
+    }
+}
+
+resetBtn.onclick = function(){
+    isUsersubscribed.textContent = '';
+    subscribeBtn.checked = false;
 }
