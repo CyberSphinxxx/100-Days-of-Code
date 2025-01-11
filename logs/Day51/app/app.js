@@ -49,3 +49,36 @@ let gradeInput  = document.getElementById('gradeInput');
 let submitBtn   = document.getElementById('submitBtn');
 let resetBtn    = document.getElementById('resetBtn');
 let gradeStatus = document.getElementById('gradeStatus');
+let userGrade;
+
+submitBtn.onclick = function() {
+
+    userGrade = gradeInput.value;
+
+    switch (true) {
+        case userGrade >= 90 && userGrade <= 100:
+            gradeStatus.textContent = 'Pass: A';
+            break;
+        
+        case userGrade >= 85:
+            gradeStatus.textContent = 'Pass: B';
+            break;
+        
+        case userGrade >= 80:
+            gradeStatus.textContent = 'Pass: C';
+            break;
+        
+        case userGrade >= 75:
+            gradeStatus.textContent = 'Pass: D';
+            break;
+        
+        case userGrade <= 74 && userGrade >= 1:
+            gradeStatus.textContent = 'Fail';
+            break;
+    
+        default:
+            gradeStatus.textContent = 'Invalid Grade'
+            break;
+    }
+
+;}
