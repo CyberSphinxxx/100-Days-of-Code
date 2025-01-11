@@ -64,18 +64,22 @@ submitBtn.onclick = function() {
 
         case userGrade >= 90 && userGrade <= 100:
             gradeStatus.textContent = 'Pass: A';
+            gradeStatus.style.color = 'green';
             break;
         
         case userGrade >= 85 && userGrade < 90:
             gradeStatus.textContent = 'Pass: B';
+            gradeStatus.style.color = 'green';
             break;
         
         case userGrade >= 80 && userGrade < 85:
             gradeStatus.textContent = 'Pass: C';
+            gradeStatus.style.color = 'green';
             break;
         
         case userGrade >= 75 && userGrade < 80:
             gradeStatus.textContent = 'Pass: D';
+            gradeStatus.style.color = 'green';
             break;
         
         case userGrade <= 74 && userGrade >= 1:
