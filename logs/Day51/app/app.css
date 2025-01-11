@@ -1,3 +1,9 @@
 body {
     background-color: rgb(235, 207, 173);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 0;
 }
