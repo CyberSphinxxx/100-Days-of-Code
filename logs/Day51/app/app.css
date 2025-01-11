@@ -7,3 +7,9 @@ body {
     height: 40vh;
     margin: 0;
 }
+
+.mainContainer {
+    background-color: rgb(240, 255, 255);
+    padding: 15px;
+    border-radius: 15px;
+}
