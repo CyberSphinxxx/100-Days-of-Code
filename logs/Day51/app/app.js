@@ -7,6 +7,7 @@ console.log(message);
 
 */
 
+/*
 let day = 3;
 
 switch (day) {
@@ -41,3 +42,5 @@ switch (day) {
         console.log(`${day} is not a day`);
         break;
 }
+
+*/
