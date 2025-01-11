@@ -59,6 +59,7 @@ submitBtn.onclick = function() {
     
         case userGrade > 100 || userGrade < 0:
             gradeStatus.textContent = 'Invalid Grade';
+            gradeStatus.style.color = 'red';
             break;
 
         case userGrade >= 90 && userGrade <= 100:
@@ -79,10 +80,12 @@ submitBtn.onclick = function() {
         
         case userGrade <= 74 && userGrade >= 1:
             gradeStatus.textContent = 'Fail';
+            gradeStatus.style.color = 'red';
             break;
     
         default:
             gradeStatus.textContent = 'Invalid Grade'
+            gradeStatus.style.color = 'red';
             break;
     };
 }
