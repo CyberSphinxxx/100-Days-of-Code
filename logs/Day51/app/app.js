@@ -84,6 +84,10 @@ submitBtn.onclick = function() {
         default:
             gradeStatus.textContent = 'Invalid Grade'
             break;
-    }
+    };
+}
 
-;}
+resetBtn.onclick = function() {
+    gradeInput.value = '';
+    gradeStatus.textContent = '';
+}
