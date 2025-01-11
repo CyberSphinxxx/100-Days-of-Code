@@ -44,3 +44,8 @@ switch (day) {
 }
 
 */
+
+let gradeInput  = document.getElementById('gradeInput');
+let submitBtn   = document.getElementById('submitBtn');
+let resetBtn    = document.getElementById('resetBtn');
+let gradeStatus = document.getElementById('gradeStatus');
