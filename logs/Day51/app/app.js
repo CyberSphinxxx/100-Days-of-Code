@@ -56,19 +56,24 @@ submitBtn.onclick = function() {
     userGrade = gradeInput.value;
 
     switch (true) {
+    
+        case userGrade > 100 || userGrade < 0:
+            gradeStatus.textContent = 'Invalid Grade';
+            break;
+
         case userGrade >= 90 && userGrade <= 100:
             gradeStatus.textContent = 'Pass: A';
             break;
         
-        case userGrade >= 85:
+        case userGrade >= 85 && userGrade < 90:
             gradeStatus.textContent = 'Pass: B';
             break;
         
-        case userGrade >= 80:
+        case userGrade >= 80 && userGrade < 85:
             gradeStatus.textContent = 'Pass: C';
             break;
         
-        case userGrade >= 75:
+        case userGrade >= 75 && userGrade < 80:
             gradeStatus.textContent = 'Pass: D';
             break;
         
