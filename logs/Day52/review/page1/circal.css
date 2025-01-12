@@ -1,1 +1,19 @@
+body {
+    background-color: rgb(55, 55, 86);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40vh;
+    margin: 0;
+}
+
+.main-container {
+    background-color: rgb(100, 100, 100);
+    border-radius: 15px;
+    padding: 10px;
+    
+}
 
