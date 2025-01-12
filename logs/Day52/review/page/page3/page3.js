@@ -20,3 +20,8 @@ submitBtn.onclick = function() {
         Window.alert('Invalid Input');
     }
 };
+
+resetBtn.onclick = function() {
+
+    ageInput.value = '';
+}
