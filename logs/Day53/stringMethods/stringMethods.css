@@ -15,10 +15,3 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-.methodLength {
-    background-color: aquamarine;
-    padding: 15px;
-    border-radius: 15px;
-    border: 3px solid black;
-}
