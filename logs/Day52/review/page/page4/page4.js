@@ -14,11 +14,11 @@ submitBtn.onclick = function() {
             gradeStat.textContent = 'Invalid Input';
             break;
 
-        case (grade >95 && grade <100 ):
+        case (grade > 95 && grade <100 ):
             gradeStat.textContent = 'Excellent: A';
             break;
 
-        case (grade >90 && grade <94.99 ):
+        case (grade > 90 && grade <94.99 ):
             gradeStat.textContent = 'Very Good: B+';
             break;
 
@@ -46,5 +46,5 @@ submitBtn.onclick = function() {
 
 resetBtn.onclick = function() {
     gradeInput.value = '';
-    
+
 }
