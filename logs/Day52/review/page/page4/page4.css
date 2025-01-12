@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    height: 20vh;
+    height: 30vh;
 }
 
 .main-container {
@@ -13,4 +13,5 @@ body {
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
+    border: solid black;
 }
