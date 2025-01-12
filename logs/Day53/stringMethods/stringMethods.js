@@ -9,5 +9,5 @@ let stringLength;
 submitBtn.onclick = function(){
     stringInput = textLengthInput.value;
     stringLength = stringInput.length;
-    stringLengthResult.textContent = stringLength;
+    stringLengthResult.textContent = `String Length: ${stringLength}`;
 }
