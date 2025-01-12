@@ -17,5 +17,11 @@ submitBtn.onclick = function(){
     result.textContent = `Result: ${circumference}`;
     result.style.color = 'lightgreen'
     solution.textContent = `Solution: Circumference = 2 x PI x ${radius} = ${circumference}`;
+};
 
+resetBtn.onclick = function() {
+
+    radiusInput.value = '';
+    result.textContent = '';
+    solution.textContent = '';
 };
