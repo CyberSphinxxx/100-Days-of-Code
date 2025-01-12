@@ -11,3 +11,8 @@ submitBtn.onclick = function(){
     stringLength = stringInput.length;
     stringLengthResult.textContent = `String Length: ${stringLength}`;
 }
+
+resetBtn.onclick = function(){
+    textLengthInput.value = '';
+    stringLengthResult.textContent = '';
+}
