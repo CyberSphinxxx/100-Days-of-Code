@@ -1,0 +1,16 @@
+body {
+    background-color: bisque;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 20vh;
+}
+
+.main-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
