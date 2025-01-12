@@ -4,6 +4,15 @@ body {
 
     display: flex;
     justify-content: center;
+
+    margin: 0;
+}
+
+.main-container {
+    background-color: rgb(0, 83, 156);
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 50px;
 }
 
 h1 {
@@ -15,4 +24,8 @@ h1 {
 button {
     padding: 20px;
     border-radius: 10px;
+}
+
+.decreaseBtn{
+    background-color: red;
 }
