@@ -17,19 +17,20 @@
 - changed images width and height to 15vh to align with figma
 - changed margin from 10vh to 7 so that all the images fit within 2 lines (align with figma)
 
-before:
+## before:
 ![before](image-1.png)
 
-after:
+## after:
 ![after](image-2.png)
 
 # Major Changes:
+### 3. What's Up Content
+- Updated the "What's Up" section with updated content.
+- Enhanced alignment and styling based on the Figma design.
 
-Added What's Up Content
-
-Before:
+## Before:
 ![alt text](image-6.png)
 
-After:
+## After:
 ![alt text](image-5.png)
 
