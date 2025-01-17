@@ -10,8 +10,8 @@ submitBtn.onclick = function(){
 
     submittedString = stringInput.value;
     stringLength = submittedString.length;
-    output.textContent = stringLength;
-
+    output.textContent = `Text Length: ${stringLength} characters`;
+    output.style.color = 'green';
 };
 
 resetBtn.onclick = function(){
