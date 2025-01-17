@@ -7,3 +7,14 @@ body {
     margin: 0;
     height: 30vh;
 }
+
+.main-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+h1 {
+    margin: 10px;
+    text-align: center;
+}
