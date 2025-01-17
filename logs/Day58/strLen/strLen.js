@@ -13,3 +13,10 @@ submitBtn.onclick = function(){
     output.textContent = stringLength;
 
 };
+
+resetBtn.onclick = function(){
+
+    stringInput.value = '';
+    output.textContent = '';
+
+};
