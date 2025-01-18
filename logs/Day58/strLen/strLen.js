@@ -34,3 +34,8 @@ submitBtnUpper.onclick = function() {
     let submittedStringUpper = stringInputUpper.value;
     outputUpper.textContent = submittedStringUpper.toUpperCase();
 };
+
+resetBtnUpper.onclick = function() {
+    stringInputUpper.value = '';
+    outputUpper.textContent = '';
+};
