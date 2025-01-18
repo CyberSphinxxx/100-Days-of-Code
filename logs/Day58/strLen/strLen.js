@@ -29,6 +29,7 @@ let stringInputUpper = document.getElementById('stringInputUpper');
 let submitBtnUpper = document.getElementById('submitBtnUpper');
 let resetBtnUpper = document.getElementById('resetBtnUpper');
 let outputUpper = document.getElementById('outputUpper');
+let copyBtn = document.getElementById('copyBtn');
 
 submitBtnUpper.onclick = function() {
     let submittedStringUpper = stringInputUpper.value;
@@ -39,3 +40,21 @@ resetBtnUpper.onclick = function() {
     stringInputUpper.value = '';
     outputUpper.textContent = '';
 };
+
+function copyToClipboard(outputUpper) {
+
+    const textToCopy = document.getElementById(outputUpper).innerText;
+
+    navigator.clipboard.writeText(textToCopy)
+    .then(() => {
+      alert('Copied to clipboard: ' + textToCopy);
+    })
+
+    .catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+}
+
+copyBtn.onclick = function(){
+    copyToClipboard('outputUpper');
+}
