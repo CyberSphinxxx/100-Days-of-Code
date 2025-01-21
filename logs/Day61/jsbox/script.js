@@ -1,4 +1,4 @@
-
+/*
 let usernameInput = document.getElementById('usernameInput');
 let submitBtn = document.getElementById('submitBtn');
 let resetBtn = document.getElementById('resetBtn');
@@ -15,3 +15,17 @@ resetBtn.onclick = function(){
     usernameInput.value = '';
     result.textContent = '';
 }
+
+
+
+let PI = 3.14;
+
+if (PI === 3.14) {
+    console.log('True')
+}
+
+else {
+    console.log('false')
+}
+
+*/
