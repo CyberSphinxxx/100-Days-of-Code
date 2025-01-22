@@ -19,6 +19,8 @@ body{
     color: gold;
     border: 1px solid white;
     transition: 300ms ease;
+    cursor: pointer;
+    user-select: none;
 }
 
 .mainContainer:hover {
@@ -26,4 +28,10 @@ body{
     color: black;
     border: 2px solid black;
     transition: 300ms ease;
+}
+
+.mainContainer:active {
+    background-color: rgb(173, 173, 173);
+    transition: 300ms ease;
+    border: 2px solid gold;
 }
