@@ -38,6 +38,7 @@
 
 ## Youtube Tutorials
 - [What are Staged Changes in Git?](https://youtu.be/HyeNfWZBut8)
+- [How to host website on TOR](https://youtu.be/gi-wuoIDdjw?t=145)
 
 ## Inspirations
 - [Roasting your portfolios #6](https://youtu.be/ufmYccZ5E8M)
