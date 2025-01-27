@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(240,6.7%,17.6%,1)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='1' stroke='hsla(47,80.9%,61%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: Verdana;
+}
+
+
+.mainContainer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.926);
+    font-size: 100px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid black;
+    transition: 1000ms ease;
+}
+
+#count {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    transition: 100ms ease;
+}
+
+button {
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+#incrementBtn{
+    background-color: lightgreen;
+    transition: 200ms ease;
+}
+
+#incrementBtn:hover{
+    background-color: rgb(123, 203, 123);
+    transition: 200ms ease;
+}
+
+#decrementBtn{
+    background-color: lightcoral;
+    transition: 200ms ease;
+}
+
+#decrementBtn:hover{
+    background-color: rgb(201, 107, 107);
+    transition: 200ms ease;
+}
+
+#resetBtn {
+    background-color: orange;
+    transition: 200ms ease;
+}
+
+#resetBtn:hover {
+    background-color: rgb(225, 147, 3);
+    transition: 200ms ease;
+}
