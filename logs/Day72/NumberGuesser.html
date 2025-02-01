@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #ecf0f1;
+            --text-color: #2c3e50;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header header"
+                "sidebar-left main sidebar-right"
+                "footer footer footer";
+            min-height: 100vh;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        header {
+            grid-area: header;
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+        }
+
+        main {
+            grid-area: main;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sidebar-left {
+            grid-area: sidebar-left;
+        }
+
+        .sidebar-right {
+            grid-area: sidebar-right;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+        }
+
+        .card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type="number"] {
+            flex-grow: 1;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .message {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        select {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+        }
+
+        #history-list {
+            list-style-type: none;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: var(--border-radius);
+            padding: 0.5rem;
+        }
+
+        #history-list li {
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        #history-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar-left"
+                    "sidebar-right"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guess the Number Game</h1>
+    </header>
+
+    <aside class="sidebar-left">
+        <div class="card">
+            <h2>Game Info</h2>
+            <p>Range: <span id="min-number">1</span> - <span id="max-number">100</span></p>
+            <p>Attempts left: <span id="attempts">10</span></p>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <p>Score: <span id="score">0</span></p>
+        </div>
+    </aside>
+
+    <main>
+        <div class="card">
+            <div class="input-container">
+                <input type="number" id="guess-input" placeholder="Enter your guess">
+                <button id="guess-btn">Guess</button>
+            </div>
+            <p id="message" class="message"></p>
+            <div class="controls">
+                <button id="new-game-btn">New Game</button>
+                <select id="difficulty">
+                    <option value="easy">Easy (1-50)</option>
+                    <option value="medium" selected>Medium (1-100)</option>
+                    <option value="hard">Hard (1-200)</option>
+                </select>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Hint</h2>
+            <p id="hint" class="hint"></p>
+            <button id="hint-btn">Get Hint</button>
+        </div>
+    </main>
+
+    <aside class="sidebar-right">
+        <div class="card">
+            <h2>Game History</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </aside>
+
+    <footer>
+        <p>&copy; 2023 Guess the Number Game. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const guessInput = document.getElementById('guess-input');
+        const guessBtn = document.getElementById('guess-btn');
+        const message = document.getElementById('message');
+        const hintBtn = document.getElementById('hint-btn');
+        const hint = document.getElementById('hint');
+        const newGameBtn = document.getElementById('new-game-btn');
+        const difficultySelect = document.getElementById('difficulty');
+        const minNumberSpan = document.getElementById('min-number');
+        const maxNumberSpan = document.getElementById('max-number');
+        const attemptsSpan = document.getElementById('attempts');
+        const scoreSpan = document.getElementById('score');
+        const historyList = document.getElementById('history-list');
+        const progressBar = document.getElementById('progress');
+
+        let minNumber, maxNumber, secretNumber, attempts, maxAttempts, score, gameActive;
+
+        function initGame() {
+            const difficulty = difficultySelect.value;
+            switch (difficulty) {
+                case 'easy':
+                    minNumber = 1;
+                    maxNumber = 50;
+                    maxAttempts = 10;
+                    break;
+                case 'medium':
+                    minNumber = 1;
+                    maxNumber = 100;
+                    maxAttempts = 10;
+                    break;
+                case 'hard':
+                    minNumber = 1;
+                    maxNumber = 200;
+                    maxAttempts = 8;
+                    break;
+            }
+
+            secretNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+            attempts = maxAttempts;
+            gameActive = true;
+            score = 0;
+
+            minNumberSpan.textContent = minNumber;
+            maxNumberSpan.textContent = maxNumber;
+            attemptsSpan.textContent = attempts;
+            scoreSpan.textContent = score;
+            message.textContent = '';
+            hint.textContent = '';
+            guessInput.value = '';
+            historyList.innerHTML = '';
+            updateProgressBar();
+
+            guessInput.focus();
+        }
+
+        function updateScore() {
+            score += Math.max(0, 11 - (maxNumber - minNumber + 1) / 20 - (maxAttempts - attempts));
+            scoreSpan.textContent = Math.round(score);
+        }
+
+        function updateProgressBar() {
+            const progress = ((maxAttempts - attempts) / maxAttempts) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function checkGuess() {
+            if (!gameActive) return;
+
+            const userGuess = parseInt(guessInput.value);
+            if (isNaN(userGuess) || userGuess < minNumber || userGuess > maxNumber) {
+                setMessage(`Please enter a valid number between ${minNumber} and ${maxNumber}.`, 'error');
+                return;
+            }
+
+            attempts--;
+            attemptsSpan.textContent = attempts;
+            updateProgressBar();
+
+            if (userGuess === secretNumber) {
+                gameActive = false;
+                setMessage('Congratulations! You guessed the correct number!', 'success');
+                updateScore();
+                addToHistory(`You won! The number was ${secretNumber}`);
+            } else if (attempts === 0) {
+                gameActive = false;
+                setMessage(`Game over! The correct number was ${secretNumber}.`, 'error');
+                addToHistory(`You lost. The number was ${secretNumber}`);
+            } else {
+                const difference = Math.abs(userGuess - secretNumber);
+                let hintText = '';
+
+                if (difference <= 5) {
+                    hintText = 'Very hot! ';
+                } else if (difference <= 10) {
+                    hintText = 'Hot! ';
+                } else if (difference <= 20) {
+                    hintText = 'Warm. ';
+                } else {
+                    hintText = 'Cold. ';
+                }
+
+                hintText += userGuess < secretNumber ? 'Try higher!' : 'Try lower!';
+                setMessage(hintText, 'hint');
+                addToHistory(`Guess: ${userGuess} - ${hintText}`);
+            }
+
+            guessInput.value = '';
+            guessInput.focus();
+        }
+
+        function setMessage(text, type) {
+            message.textContent = text;
+            message.className = `message ${type}`;
+            if (type === 'error') {
+                message.classList.add('shake');
+                setTimeout(() => message.classList.remove('shake'), 500);
+            }
+        }
+
+        function getHint() {
+            if (!gameActive) return;
+
+            const hintOptions = [
+                `The number is ${secretNumber % 2 === 0 ? 'even' : 'odd'}.`,
+                `The number is ${secretNumber > (minNumber + maxNumber) / 2 ? 'in the upper half' : 'in the lower half'} of the range.`,
+                `The number is ${secretNumber % 10 === 0 ? '' : 'not '}a multiple of 10.`,
+                `The sum of the digits is ${String(secretNumber).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0)}.`
+            ];
+
+            const randomHint = hintOptions[Math.floor(Math.random() * hintOptions.length)];
+            hint.textContent = randomHint;
+        }
+
+        function addToHistory(text) {
+            const li = document.createElement('li');
+            li.textContent = text;
+            historyList.prepend(li);
+        }
+
+        guessBtn.addEventListener('click', checkGuess);
+        guessInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') checkGuess();
+        });
+        hintBtn.addEventListener('click', getHint);
+        newGameBtn.addEventListener('click', initGame);
+        difficultySelect.addEventListener('change', initGame);
+
+        initGame();
+    </script>
+</body>
+</html>
