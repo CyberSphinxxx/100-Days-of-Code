@@ -59,3 +59,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 41 - 🎆 New Year Break | Played with document.getElementById()
 - Day 42 - 💻 Web Development Practice
 - Day 43 - 🔢 Created Random Number Generator
+- Day 44 - 💻 Learning Arduino Uno
