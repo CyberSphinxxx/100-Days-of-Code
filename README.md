@@ -58,3 +58,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 40 - 🎆 Created New Year Countdown Timer https://new-year-countdown-timer-murex.vercel.app
 - Day 41 - 🎆 New Year Break | Played with document.getElementById()
 - Day 42 - 💻 Web Development Practice
+- Day 43 - 🔢 Created Random Number Generator
