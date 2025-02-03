@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Lemar L. Gonzales Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <style>
+    body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #c9d1d9;
+    background-color: #0d1117;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: #58a6ff;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Header Section */
+  .header {
+    text-align: center;
+    padding: 2rem;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+  }
+
+  .header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #c9d1d9;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+    color: #58a6ff;
+  }
+
+  .header h2 {
+    font-size: 1.2rem;
+    color: #8b949e;
+    margin: 0.5rem 0;
+  }
+
+  .header .buttons {
+    margin-top: 1.5rem;
+  }
+
+  .header .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    background-color: #21262d;
+    color: #c9d1d9;
+    margin: 0.5rem;
+    font-weight: bold;
+    border: 1px solid #30363d;
+    transition: all 0.3s;
+  }
+
+  .header .btn:hover {
+    background-color: #30363d;
+    color: #58a6ff;
+  }
+
+  /* About Section */
+  .about {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .about p {
+    margin: 0 auto;
+    max-width: 700px;
+    color: #8b949e;
+  }
+
+  /* Section Styles */
+  .section {
+    padding: 2rem;
+    border-top: 1px solid #30363d;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #c9d1d9;
+  }
+
+  /* Cards */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .card {
+    background: #161b22;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid #30363d;
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+    color: #58a6ff;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    color: #8b949e;
+  }
+
+  /* Skills Section */
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .skills-card {
+    background: #161b22;
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid #30363d;
+  }
+
+  .skills-card h4 {
+    color: #58a6ff;
+  }
+
+  .skills-card ul li {
+    margin-bottom: 0.5rem;
+    color: #8b949e;
+  }
+
+  /* Achievements Grid */
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .achievement-item {
+    background: #161b22;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #8b949e;
+    border: 1px solid #30363d;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #161b22;
+    border-top: 1px solid #30363d;
+  }
+
+  .footer a {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    color: #58a6ff;
+  }
+
+  .footer p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #8b949e;
+  }
+
+  </style>
+
+</head>
+
+<body>
+  <!-- Header Section -->
+  <section class="header">
+    <img src="/logs/Day74/app/profile.jpg" alt="Profile Picture">
+    <h1>John Lemar L. Gonzales</h1>
+    <h2>Innovator, Leader, Technologist</h2>
+    <div class="buttons">
+      <a href="#" class="btn"><i class="fas fa-rocket"></i> Projects</a>
+      <a href="#" class="btn"><i class="fas fa-file-alt"></i> Resume</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      An organized, dedicated, and ambitious student deeply passionate about technology and its functionalities. I am eager to contribute my strong leadership and teaching skills, particularly in areas where I have mastered the subject matter, to a dynamic team or organization that values innovation and continuous learning.
+    </p>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="card-container">
+      <div class="card">
+        <h4><i class="fas fa-cogs"></i> Information Technology Lead</h4>
+        <p>Google Developer Student Clubs, University of Science and Technology of Southern Philippines, CDO</p>
+        <p>Aug 2024 - Present</p>
+        <p>Overseeing IT operations and leading initiatives to integrate innovative technologies into the club's projects and events.</p>
+      </div>
+      <div class="card">
+        <h4><i class="fas fa-user-tie"></i> Information Technology Ambassador</h4>
+        <p>Google Developer Student Clubs, University of Science and Technology of Southern Philippines, CDO</p>
+        <p>Sep 2023 - Sep 2024</p>
+        <p>Acted as a bridge between students and the IT field, promoting GDSC's mission and encouraging involvement in tech-focused activities and training.</p>
+      </div>
+      <div class="card">
+        <h4><i class="fas fa-lightbulb"></i> School Researcher</h4>
+        <p>Liceo de Cagayan University</p>
+        <p>2022</p>
+        <p>Led a winning research project utilizing Roblox Studio to create an award-winning "Online 3D Touring" system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section">
+    <h2 class="section-title">Skills & Tools</h2>
+    <div class="skills-container">
+      <div class="skills-card">
+        <h4><i class="fas fa-code"></i> Programming</h4>
+        <ul>
+          <li><i class="fab fa-html5"></i> HTML</li>
+          <li><i class="fab fa-css3-alt"></i> CSS</li>
+          <li><i class="fab fa-js"></i> JavaScript</li>
+          <li><i class="fas fa-python"></i> Python</li>
+          <li><i class="fab fa-java"></i> Java</li>
+          <li><i class="fas fa-terminal"></i> C</li>
+          <li><i class="fas fa-gamepad"></i> LUA</li>
+        </ul>
+      </div>
+      <div class="skills-card">
+        <h4><i class="fas fa-tools"></i> Tools & Databases</h4>
+        <ul>
+          <li><i class="fas fa-database"></i> MySQL</li>
+          <li><i class="fab fa-git"></i> Git</li>
+          <li><i class="fas fa-globe"></i> WordPress</li>
+          <li><i class="fas fa-shield-alt"></i> Kali Linux</li>
+          <li><i class="fas fa-code"></i> VSCode</li>
+        </ul>
+      </div>
+      <div class="skills-card">
+        <h4><i class="fas fa-pencil-ruler"></i> Design</h4>
+        <ul>
+          <li><i class="fas fa-vector-square"></i> Figma</li>
+          <li><i class="fas fa-paint-brush"></i> Photoshop</li>
+          <li><i class="fas fa-video"></i> Premiere Pro</li>
+        </ul>
+      </div>
+      <div class="skills-card">
+        <h4><i class="fas fa-user-friends"></i> Leadership</h4>
+        <ul>
+          <li><i class="fas fa-lightbulb"></i> Research</li>
+          <li><i class="fas fa-network-wired"></i> IT Management</li>
+          <li><i class="fas fa-users"></i> Team Collaboration</li>
+          <li><i class="fas fa-project-diagram"></i> Project Leadership</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="section">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievements-grid">
+      <div class="achievement-item">
+        <h4><i class="fas fa-award"></i> ICT Winner: “Online 3D Touring”</h4>
+        <p>Roblox Studio-based project awarded for its innovative design and functionality.</p>
+      </div>
+      <div class="achievement-item">
+        <h4><i class="fas fa-certificate"></i> Python Programming Certification</h4>
+        <p>Received certification for demonstrating advanced Python programming skills.</p>
+      </div>
+      <div class="achievement-item">
+        <h4><i class="fas fa-users"></i> Community Leader</h4>
+        <p>Recognized for leadership in tech and community engagement projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div>
+      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#"><i class="fab fa-github"></i> GitHub</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+    <p>© 2024 John Lemar L. Gonzales. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
