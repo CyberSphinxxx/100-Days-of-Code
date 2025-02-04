@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(61, 61, 76);
+
+    
+    
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.item {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 10px;
+    transition: 900ms ease;
+    transition: 900ms ease;
+}
+
+.item:hover {
+    background-color: red;
+    transition: 300ms ease;
+}
