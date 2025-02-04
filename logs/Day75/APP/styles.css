@@ -6,4 +6,18 @@
 body {
     background-color: rgb(77, 88, 111);
     color: white;
+
+}
+
+header {
+    background-color: rebeccapurple;
+    padding: 4vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
 }
