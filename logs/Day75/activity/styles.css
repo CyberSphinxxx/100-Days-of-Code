@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: beige;
+
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border: 1px solid black;
+}
+
+tr, th, td {
+    margin: 0;
+    border: 1px solid black;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.mainContainer {
+    margin-top: 50px;
+}
+
+#x {
+    padding: 20px;
+}
