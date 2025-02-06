@@ -61,3 +61,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 43 - 🔢 Created Random Number Generator
 - Day 44 - 💻 Learning Arduino Uno
 - Day 45 - 💻 Learning Arduino Uno Continuation
+- Day 46 - TBA
