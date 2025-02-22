@@ -17,7 +17,7 @@ body {
     flex-direction: row;
     gap: 10px;
     margin: 10px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     background-color: red;
     padding: 10px;
@@ -58,4 +58,26 @@ button {
 
 button:hover {
     background-color: aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .mainContainer {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .buttonContainer {
+        flex-direction: row;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
