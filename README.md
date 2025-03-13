@@ -63,3 +63,4 @@ This repository documents my 100 Days of Code challenge, where I commit to codin
 - Day 45 - 💻 Learning Arduino Uno Continuation
 - Day 46 - 💻 Web Development Practice
 - Day 47 - 💻 Created a Bruteforce app
+- Day 48 - 💻 Practiced Checked Properties
